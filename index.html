@@ -2811,6 +2811,57 @@ body::after {
   section.light { border-top-color: rgba(26,24,22,0.07); border-bottom-color: rgba(26,24,22,0.07); }
 }
 
+/* =========================================================
+   VIEWPORT-LOCK STABILITY PASS
+   Solves the iOS Safari "horizontal drift / flying" feel
+   by hard-locking html + body to the viewport on every
+   axis they touch. Also pins per-section scroll offsets so
+   smooth-scroll from the menu lands cleanly below the
+   sticky 92px nav, every time.
+   ========================================================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+/* `overflow: clip` is stronger than `hidden` — it does NOT
+   create a scroll container, so it cannot leak momentum or
+   defeat sticky positioning ancestors. iOS 16+ supports it. */
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
+}
+/* Sticky-nav-aware scroll target for every section.
+   Belt-and-braces with html { scroll-padding-top: 92px } —
+   Safari occasionally honours one over the other. */
+section[id] { scroll-margin-top: 92px; }
+
+@media (max-width: 768px) {
+  /* Stop any rubber-band drift from the body scroll context */
+  body { overscroll-behavior-y: contain; }
+  /* Reduce sticky-nav offset to actual mobile nav height */
+  section[id] { scroll-margin-top: 76px; }
+  /* Defensive horizontal clip on every <main> child — keeps
+     the negative-margin scroll-snap tracks from ever leaking
+     into the body horizontal scroll context. The internal
+     `overflow-x: auto` on the track itself creates its own
+     scroll context, so carousels still swipe. */
+  main > section { overflow-x: clip; }
+  @supports not (overflow: clip) {
+    main > section { overflow-x: hidden; }
+  }
+  /* Flex/grid children must never stretch their row past viewport */
+  .services-grid > *, .why-grid > *, .marques-grid > *,
+  .reviews-grid > *, .review-grid > * { min-width: 0; }
+  .promise-grid > *, .booking-grid > *, .footer-grid > *,
+  .stats-grid > *, .trust-strip-inner > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  /* Hero background can never push past viewport */
+  .hero, .hero-bg { max-width: 100vw; max-width: 100%; }
+}
+
 </style>
 </head>
 <body>
@@ -3761,36 +3812,28 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   targets.forEach((el) => reveal.observe(el));
 })();
 
+
 /* ==========================================================
-   STAT COUNTERS — Safari-hardened
-   - Observes the .stats SECTION, not individual <span> spans
-     (iOS Safari can fail to fire on tiny inline targets with
-     non-zero threshold + negative rootMargin).
-   - Lower threshold (0.05) + earlier rootMargin so the trigger
-     fires the moment the section starts entering view.
-   - Three independent kick-starts: IntersectionObserver,
-     getBoundingClientRect synchronous check at script-init for
-     already-visible cases, and a 4s setTimeout safety net.
-   - Idempotent — the `started` flag means whichever fires first
-     wins; the others become no-ops.
-   - Honours prefers-reduced-motion by snapping straight to the
-     target value with no animation.
+   STAT COUNTERS — Safari-hardened.
+   Three independent kick-starts: IntersectionObserver,
+   synchronous getBoundingClientRect check at script-init for
+   already-visible cases, and a 4-second setTimeout safety net.
+   Whichever fires first wins; the started flag makes the
+   others no-ops. Respects prefers-reduced-motion.
    ========================================================== */
 (function initStatCounters() {
   const counters = document.querySelectorAll('.counter[data-target]');
   if (!counters.length) return;
-
-  const reduced = window.matchMedia &&
-                  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fmt = (n) => n.toLocaleString('en-GB');
   let started = false;
-
   const animate = (el) => {
     if (el.dataset.done === '1') return;
     el.dataset.done = '1';
     const target = parseInt(el.dataset.target, 10);
     if (!Number.isFinite(target)) return;
-
+    const suffix = el.dataset.suffix || '';
+    if (reduced) { el.textContent = fmt(target) + suffix; return; }
     const duration = 1800;
     const start = performance.now();
     const ease = (t) => 1 - Math.pow(1 - t, 3);
@@ -3802,38 +3845,26 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     };
     requestAnimationFrame(tick);
   };
-
   const startAll = () => {
     if (started) return;
     started = true;
     counters.forEach(animate);
   };
-
   const statsSection = document.querySelector('.stats') || counters[0].closest('section');
   const observeTarget = statsSection || counters[0];
-
-  if (!('IntersectionObserver' in window)) {
-    startAll();
-    return;
-  }
-
+  if (!('IntersectionObserver' in window)) { startAll(); return; }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        startAll();
-        observer.disconnect();
-      }
+      if (entry.isIntersecting) { startAll(); observer.disconnect(); }
     });
   }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
   observer.observe(observeTarget);
-
   if (statsSection) {
     requestAnimationFrame(() => {
       const r = statsSection.getBoundingClientRect();
       if (r.top < window.innerHeight && r.bottom > 0) startAll();
     });
   }
-
   setTimeout(startAll, 4000);
 })();
 </script>
