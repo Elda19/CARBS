@@ -3649,7 +3649,48 @@ try {
     menuClose.addEventListener('touchend', closeMenu, { passive: false });
   }
   if (mobileMenu) {
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    /* Mobile-menu link taps — DO NOT preventDefault here.
+       The previous binding used closeMenu, which calls
+       preventDefault() and so swallowed the href navigation
+       entirely. Each tap closed the menu but never scrolled.
+       Now we close the menu, unlock body scroll, and either:
+         (a) let the native anchor fire (no preventDefault), or
+         (b) for in-page anchors, take over with a smooth
+             scrollTo that compensates for the sticky 92px nav. */
+    mobileMenu.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        try {
+          const href = a.getAttribute('href') || '';
+          const isInPageAnchor = href.length > 1 && href.charAt(0) === '#';
+
+          /* Close immediately — visual + body-scroll lock release */
+          mobileMenu.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+
+          if (isInPageAnchor) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              /* One rAF tick so body scroll is unlocked
+                 BEFORE we measure + scroll. */
+              requestAnimationFrame(() => {
+                const headerOffset = 84;
+                const targetTop = target.getBoundingClientRect().top
+                                  + window.pageYOffset
+                                  - headerOffset;
+                try {
+                  window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                } catch (_) {
+                  /* Pre-15.4 Safari fallback — plain jump */
+                  window.scrollTo(0, targetTop);
+                }
+              });
+            }
+          }
+        } catch (err) { console.error('[menu] link tap failed', err); }
+      });
+    });
   }
 
   // Document-level delegation — Safari fallback
@@ -3749,12 +3790,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     el.dataset.done = '1';
     const target = parseInt(el.dataset.target, 10);
     if (!Number.isFinite(target)) return;
-    const suffix = el.dataset.suffix || '';
-
-    if (reduced) {
-      el.textContent = fmt(target) + suffix;
-      return;
-    }
 
     const duration = 1800;
     const start = performance.now();
@@ -3774,11 +3809,9 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     counters.forEach(animate);
   };
 
-  /* Observe the section, not the counters — far more reliable on iOS */
   const statsSection = document.querySelector('.stats') || counters[0].closest('section');
   const observeTarget = statsSection || counters[0];
 
-  /* Fallback #1: no IntersectionObserver -> animate now */
   if (!('IntersectionObserver' in window)) {
     startAll();
     return;
@@ -3794,10 +3827,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
   observer.observe(observeTarget);
 
-  /* Fallback #2: deep-link or initial-visibility case.
-     If the section is already on screen when the script runs,
-     IntersectionObserver may need a tick to fire its first
-     entry — kick off after a short rAF so it isn't beaten. */
   if (statsSection) {
     requestAnimationFrame(() => {
       const r = statsSection.getBoundingClientRect();
@@ -3805,9 +3834,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     });
   }
 
-  /* Fallback #3: absolute safety net.
-     If neither fired after 4s for any reason (iOS quirk, throttled
-     background tab waking up, etc.) just animate. Idempotent. */
   setTimeout(startAll, 4000);
 })();
 </script>
