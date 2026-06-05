@@ -1,0 +1,3816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Car Centre BS LTD — Same-Day MOT &amp; Premium Vehicle Care in London | NW11</title>
+<meta name="description" content="Car Centre BS LTD — London's premium independent garage in NW11 for same-day MOT, expert diagnostics, brakes, servicing and luxury vehicle care. 4.8★ on Google, 170+ reviews. Call or WhatsApp +44 7720 296813." />
+<meta name="keywords" content="MOT London, same-day MOT NW11, car servicing London, vehicle diagnostics, luxury car garage London, Car Centre BS" />
+<meta name="author" content="Car Centre BS LTD" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0f1113" />
+<link rel="canonical" href="https://www.carcentrebs.co.uk/" />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Car Centre BS LTD" />
+<meta property="og:title" content="Car Centre BS LTD — Same-Day MOT &amp; Premium Vehicle Care in London" />
+<meta property="og:description" content="London's premium independent garage in NW11 for same-day MOT, expert diagnostics and luxury vehicle servicing. Trusted by 170+ London drivers." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:url" content="https://www.carcentrebs.co.uk/" />
+<meta property="og:image" content="https://www.carcentrebs.co.uk/hero.jpg" />
+<meta property="og:image:alt" content="Rolls-Royce in front of Tower Bridge, London at night" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Car Centre BS LTD — Same-Day MOT &amp; Premium Vehicle Care in London" />
+<meta name="twitter:description" content="London's premium independent garage in NW11. Same-day MOT, diagnostics, servicing and luxury vehicle care." />
+<meta name="twitter:image" content="https://www.carcentrebs.co.uk/hero.jpg" />
+
+<!-- JSON-LD: Local Business structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Car Centre BS LTD",
+  "image": "https://www.carcentrebs.co.uk/hero.jpg",
+  "url": "https://www.carcentrebs.co.uk/",
+  "telephone": "+447720296813",
+  "email": "carcentre@outlook.com",
+  "description": "London's premium independent garage in NW11 for same-day MOT, expert diagnostics, brakes, servicing and luxury vehicle care.",
+  "priceRange": "££",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "17-25 Portsdown Mews",
+    "addressLocality": "London",
+    "postalCode": "NW11 7ES",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5795745,
+    "longitude": -0.198786
+  },
+  "areaServed": { "@type": "City", "name": "London" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "170"
+  }
+}
+</script>
+
+<!-- Preload critical hero asset -->
+<link rel="preload" as="image" href="hero.jpg" fetchpriority="high" />
+<link rel="preload" as="image" href="workshop.jpg" fetchpriority="high" />
+
+<!-- Fonts: Cormorant Garamond (display) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+:root {
+  /* Dark mood — charcoal, not pure black */
+  --bg: #16181a;            /* base body (lifted from #0a0a0a) */
+  --bg-1: #1a1c1e;          /* slightly lifted */
+  --bg-2: #1f2124;          /* card on dark */
+  --surface: #1f2124;
+  --surface-2: #25272a;
+  --ink-deep: #0f1113;      /* deepest for hero/footer */
+
+  /* Light mood — warm cream */
+  --cream: #f4eee2;
+  --cream-soft: #efe7d5;
+  --cream-deep: #e6dcc6;
+  --on-cream: #1a1816;
+  --on-cream-soft: #4a463d;
+  --on-cream-dim: #877f6f;
+  --line-on-cream: rgba(26,24,22,0.10);
+  --line-on-cream-strong: rgba(26,24,22,0.20);
+  --line-on-cream-gold: rgba(150,116,52,0.30);
+
+  /* Lines (on dark) */
+  --line: rgba(255,255,255,0.07);
+  --line-strong: rgba(255,255,255,0.14);
+  --line-gold: rgba(201,165,91,0.22);
+
+  /* Text (on dark) */
+  --text: #efe9dc;
+  --text-soft: #b8b2a4;
+  --text-dim: #7d796f;
+
+  /* Accent — refined brass */
+  --gold: #b69256;
+  --gold-bright: #d4b87a;
+  --gold-deep: #8a6b35;
+  --gold-soft: rgba(182,146,86,0.12);
+
+  /* Type */
+  --font-display: 'Cormorant Garamond', 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* Layout */
+  --pad: clamp(1.25rem, 5vw, 6.5rem);
+  --maxw: 1320px;
+  --section: clamp(5.5rem, 10vw, 10rem);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 0.25s;
+  --t: 0.45s;
+  --t-slow: 0.7s;
+
+  /* Shadows */
+  --shadow-card: 0 24px 48px -24px rgba(0,0,0,0.6), 0 8px 16px -8px rgba(0,0,0,0.4);
+  --shadow-card-hover: 0 30px 60px -28px rgba(0,0,0,0.7), 0 12px 22px -10px rgba(0,0,0,0.45);
+  --shadow-soft: 0 14px 30px -16px rgba(0,0,0,0.5);
+
+  /* Spacing scale — canonical sizing tokens */
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  6rem;
+  --space-2xl: 8rem;
+
+  /* Border radii (currently sharp by design; tokens reserved for future) */
+  --radius-0:  0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Z-index hierarchy — single source of truth.
+     Negative = behind content. 1-9 = in-flow stacking.
+     70+ = fixed/sticky UI surfaces. */
+  --z-below:        -1;
+  --z-base:          1;
+  --z-raised:        2;
+  --z-float:        70;   /* WhatsApp floating bubble (desktop) */
+  --z-mobile-bar:   75;   /* Sticky bottom CTA bar (mobile) */
+  --z-nav:          80;   /* Sticky top navigation */
+  --z-grain:        90;   /* Film-grain overlay (desktop only) */
+  --z-mobile-menu:  95;   /* Mobile menu sheet */
+  --z-menu-toggle: 101;   /* Hamburger button — must sit above everything in the nav */
+  --z-modal:       200;   /* Reserved for any future modal/dialog */
+  --z-toast:       300;   /* Reserved for any future toast/notice */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: 0; background: transparent; color: inherit; }
+input, select, textarea { font-family: inherit; font-size: 1rem; }
+
+/* Section base */
+section { padding: var(--section) var(--pad); position: relative; }
+/* Below-the-fold sections skip rendering work until near the viewport
+   — large mobile/desktop rendering win, visually identical */
+/* Lazy-render optimisation — apply ONLY to deep-page sections that
+   the user reaches long after first paint. Above-the-fold sections
+   (.promise, .services, .trust strip, .stats) must paint
+   synchronously or the hero → promise transition shows a "blank
+   then pop-in" frame on slower devices. */
+.workshop, .marques, .reviews, .booking, .cinematic {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+/* Defensive opt-out for critical sections regardless of any
+   later rule attempting to apply content-visibility.
+   The descendant selector (`.stats *` etc.) is belt-and-braces
+   against any nested element ever picking up content-visibility
+   from a future global rule — counters in particular must paint
+   on every frame the section is visible. */
+.promise, .services, .stats, .trust-strip, .why,
+.promise *, .services *, .stats *, .trust-strip *, .why * {
+  content-visibility: visible !important;
+  contain-intrinsic-size: none !important;
+}
+.container { max-width: var(--maxw); margin: 0 auto; }
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  line-height: 1.1;
+}
+.h-display { font-size: clamp(2.7rem, 6.5vw, 5.6rem); line-height: 1.02; letter-spacing: -0.025em; }
+.h-section { font-size: clamp(2.3rem, 4.6vw, 4.2rem); line-height: 1.04; letter-spacing: -0.02em; }
+.h-sub { font-size: clamp(1.3rem, 1.7vw, 1.6rem); line-height: 1.25; }
+
+.italic-accent { font-style: italic; color: var(--gold); font-weight: 400; }
+
+.lead {
+  font-size: 1.08rem;
+  color: var(--text-soft);
+  font-weight: 300;
+  line-height: 1.75;
+  max-width: 58ch;
+}
+
+/* =========================================================
+   LIGHT-MOOD SECTIONS — warm cream, charcoal text
+   ========================================================= */
+/* Override the design tokens at the `.light` boundary. Every descendant
+   that already consumes `var(--text)`, `var(--text-soft)`, `var(--text-dim)`,
+   `var(--gold)`, `var(--line)`, `var(--line-strong)` or `var(--line-gold)`
+   now resolves to its cream-palette equivalent via the cascade — no
+   per-component override needed. This removes the bulk of the legacy
+   `.light h1 / .lead / .eyebrow / .italic-accent / .trust-item *` rules. */
+.light {
+  --text:         var(--on-cream);
+  --text-soft:    var(--on-cream-soft);
+  --text-dim:     var(--on-cream-dim);
+  --line:         var(--line-on-cream);
+  --line-strong:  var(--line-on-cream-strong);
+  --line-gold:    var(--line-on-cream-gold);
+  --gold:         var(--gold-deep);
+  --gold-bright:  var(--gold-deep);
+  background: var(--cream);
+  color: var(--on-cream);
+  border-color: var(--line-on-cream);
+}
+.trust-strip.light {
+  background: var(--cream);
+  border-top-color: var(--line-on-cream);
+  border-bottom-color: var(--line-on-cream);
+}
+
+/* Cards / surfaces in light mood */
+.light .surface-card {
+  background: #fbf7ec;
+  border-color: var(--line-on-cream);
+}
+.light .surface-soft {
+  background: var(--cream-soft);
+}
+
+/* Dividers in light mood */
+.light .divider { border-color: var(--line-on-cream); }
+
+/* Buttons in light mood — refined */
+.light .btn {
+  border-color: var(--line-on-cream-strong);
+  color: var(--on-cream);
+}
+.light .btn:hover {
+  border-color: var(--gold-deep);
+  color: var(--gold-deep);
+  background: rgba(26,24,22,0.03);
+}
+.light .btn-primary {
+  background: var(--on-cream);
+  border-color: var(--on-cream);
+  color: var(--cream);
+}
+.light .btn-primary:hover {
+  background: var(--gold-deep);
+  border-color: var(--gold-deep);
+  color: var(--cream);
+}
+
+/* Section bg override + structural treatment */
+section.light {
+  background: var(--cream);
+  border-top: 1px solid var(--line-on-cream);
+  border-bottom: 1px solid var(--line-on-cream);
+}
+section.light + section.light { border-top: none; }
+
+/* Trust strip in light mood — `.trust-item` / strong / svg colours all
+   now inherit through the .light token overrides above. */
+.light .trust-item { color: var(--on-cream-soft); }
+
+/* Services in light mood */
+.light .services-grid {
+  background: var(--line-on-cream);
+  border-color: var(--line-on-cream);
+}
+.light .service { background: var(--cream); }
+.light .service::before { background: linear-gradient(135deg, rgba(150,116,52,0.06), transparent 60%); }
+.light .service:hover { background: #fbf7ec; }
+.light .service h3 { color: var(--on-cream); }
+.light .service p { color: var(--on-cream-soft); }
+.light .service-icon {
+  border-color: var(--line-on-cream-gold);
+  color: var(--gold-deep);
+}
+.light .service-arrow { color: var(--on-cream-dim); }
+.light .service:hover .service-arrow { color: var(--gold-deep); }
+
+/* Promise in light */
+.light .promise-image { border-color: var(--line-on-cream); }
+.light .promise-image .corner { color: var(--on-cream); background: rgba(244,238,226,0.92); padding: 0.6rem 0.9rem; }
+.light .promise-image .corner small { color: var(--gold-deep); }
+.light .promise-point { border-top-color: var(--line-on-cream); }
+.light .promise-point .num { color: var(--gold-deep); }
+.light .promise-point h4 { color: var(--on-cream); }
+.light .promise-point p { color: var(--on-cream-soft); }
+
+/* Stats in light */
+.light .stats-grid {
+  border-color: var(--line-on-cream);
+}
+.light .stat { border-right-color: var(--line-on-cream); }
+.light .stat-num { color: var(--on-cream); }
+.light .stat-rule { background: var(--gold-deep); }
+.light .stat-label { color: var(--on-cream-soft); }
+/* .stat-num .unit inherits the redefined --gold via the cascade. */
+@media (max-width: 760px) {
+  .light .stat { border-right-color: var(--line-on-cream); border-bottom-color: var(--line-on-cream); }
+}
+
+/* Why-cards in light */
+.light .why-card {
+  background: #fbf7ec;
+  border-color: var(--line-on-cream);
+}
+.light .why-card:hover { border-color: var(--line-on-cream-gold); background: #fffaef; }
+.light .why-card .why-icon { color: var(--gold-deep); }
+.light .why-card h3 { color: var(--on-cream); }
+.light .why-card p { color: var(--on-cream-soft); }
+
+/* Reviews in light */
+.light .review-pill {
+  border-color: var(--line-on-cream-strong);
+  color: var(--on-cream-soft);
+}
+/* .review-pill strong / .stars inherit --text / --gold through the cascade. */
+.light .review-card {
+  background: #fbf7ec;
+  border-color: var(--line-on-cream);
+}
+.light .review-card:hover { border-color: var(--line-on-cream-gold); background: #fffaef; }
+/* .review-stars / .review-text / .review-author / .review-name / .review-date
+   inherit --gold / --text / --line / --text-dim via the cascade. */
+.light .review-avatar {
+  background: linear-gradient(135deg, var(--gold-deep), #6e5526);
+  color: var(--cream);
+}
+.light .google-badge {
+  border-color: var(--line-on-cream-strong);
+  color: var(--on-cream);
+}
+.light .google-badge:hover { border-color: var(--gold-deep); background: rgba(150,116,52,0.06); }
+
+/* Booking form in light */
+.light .contact-row { border-top-color: var(--line-on-cream); }
+.light .contact-icon { border-color: var(--line-on-cream-gold); color: var(--gold-deep); }
+.light .contact-info small { color: var(--on-cream-dim); }
+.light .contact-info a, .light .contact-info span { color: var(--on-cream); }
+.light .contact-info a:hover { color: var(--gold-deep); }
+.light .hours .day { color: var(--on-cream-soft); }
+.light .hours .time { color: var(--on-cream); }
+.light .booking-form {
+  background: #fbf7ec;
+  border-color: var(--line-on-cream);
+  box-shadow: 0 30px 60px -28px rgba(26,24,22,0.18), 0 8px 22px -10px rgba(26,24,22,0.08);
+}
+.light .booking-form h3 { color: var(--on-cream); }
+.light .booking-form .form-sub { color: var(--on-cream-soft); }
+.light .field label { color: var(--on-cream-dim); }
+.light .field input,
+.light .field select,
+.light .field textarea {
+  background-color: rgba(255,255,255,0.5);
+  border-color: var(--line-on-cream-strong);
+  color: var(--on-cream);
+}
+.light .field input::placeholder, .light .field textarea::placeholder { color: var(--on-cream-dim); }
+.light .field input:focus, .light .field select:focus, .light .field textarea:focus { border-color: var(--gold-deep); background-color: #fff; }
+.light .field select { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%238a6b35' stroke-width='1.5' d='M1 1l5 5 5-5'/></svg>"); background-repeat: no-repeat; background-position: right 0.95rem center; }
+.light .map-wrap { border-color: var(--line-on-cream); }
+.light .map-wrap iframe { filter: grayscale(0.45) contrast(1.02) brightness(1.02); }
+
+/* Section head in light */
+.light .section-head .title-block .eyebrow,
+.light .reviews-head .eyebrow,
+.light .marques-head .eyebrow { color: var(--gold-deep); }
+.light .section-head .title-block .eyebrow::before { background: var(--gold-deep); }
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 1.05rem 1.7rem;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  white-space: nowrap;
+}
+.btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+.btn svg { width: 14px; height: 14px; }
+
+.btn-primary {
+  background: var(--gold);
+  color: #0a0a0a;
+  border-color: var(--gold);
+}
+.btn-primary:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  color: #0a0a0a;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--line-strong);
+}
+
+/* =========================================================
+   TOP CONTACT BAR
+   ========================================================= */
+.topbar {
+  background: #060606;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+.topbar-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.6rem var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.topbar a { color: var(--text-soft); transition: color var(--t-fast); }
+.topbar a:hover { color: var(--gold); }
+.topbar-left, .topbar-right { display: flex; align-items: center; gap: 1.5rem; }
+.topbar-item { display: inline-flex; align-items: center; gap: 0.45rem; }
+.topbar-item svg { width: 13px; height: 13px; color: var(--gold); }
+@media (max-width: 720px) {
+  .topbar-left .open-hours { display: none; }
+  .topbar-right .email { display: none; }
+  .topbar-inner { padding: 0.55rem 1.1rem; }
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(10,10,10,0.78);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+.nav.scrolled {
+  border-bottom-color: var(--line);
+  background: rgba(10,10,10,0.92);
+}
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.1rem var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.72rem;
+}
+.brand-emblem {
+  width: 52px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.55));
+  transition: transform var(--t) var(--ease);
+}
+.brand:hover .brand-emblem { transform: translateY(-1px) scale(1.03); }
+.brand-emblem svg { width: 100%; height: auto; display: block; }
+.brand-text {
+  display: flex; flex-direction: column; line-height: 1;
+}
+.brand-text strong {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ffffff 0%, #d6d6d6 38%, #8c8c8c 62%, #f1f1f1 84%, #757575 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.brand-text small {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.44em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+.brand-text small::before,
+.brand-text small::after {
+  content: '';
+  flex: 1;
+  min-width: 6px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+@media (max-width: 600px) {
+  .brand-emblem { width: 44px; }
+  .brand-text strong { font-size: 0.8rem; letter-spacing: 0.2em; }
+  .brand-text small { font-size: 0.46rem; letter-spacing: 0.36em; }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+  transition: color var(--t-fast);
+  position: relative;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t) var(--ease);
+}
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.78rem 1.2rem;
+  background: var(--gold);
+  color: #0a0a0a;
+  transition: background var(--t-fast);
+}
+.nav-cta:hover { background: var(--gold-bright); }
+
+.menu-toggle {
+  display: none;
+  padding: 0.6rem;
+  position: relative;
+  z-index: 101;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.menu-toggle svg { width: 26px; height: 26px; color: var(--text); pointer-events: none; }
+
+@media (max-width: 960px) {
+  .nav-links, .nav-cta { display: none; }
+  .menu-toggle { display: inline-flex; }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  background: rgba(10,10,10,0.97);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  opacity: 0;
+  pointer-events: none;
+  /* GPU-composited fade + tiny scale (transform/opacity only — never left/top) */
+  transform: scale(1.01);
+  transform-origin: 50% 50%;
+  transition: opacity var(--t) var(--ease), transform var(--t) var(--ease);
+  -webkit-transform: scale(1.01);
+  /* Prevent scroll-chaining: when the user scrolls to the edge of the menu,
+     the page behind never moves */
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  /* iPhone notch / home indicator safe-areas baked in */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+.mobile-menu.open { opacity: 1; pointer-events: auto; transform: scale(1); -webkit-transform: scale(1); }
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu .btn-primary { margin-top: 1rem; }
+.mobile-menu .close {
+  position: absolute;
+  top: 1.4rem; right: 1.4rem;
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.mobile-menu .close svg { width: 18px; height: 18px; pointer-events: none; }
+
+/* =========================================================
+   HERO — cinematic full-bleed
+   ========================================================= */
+.hero {
+  position: relative;
+  min-height: clamp(680px, 94vh, 960px);
+  padding: clamp(5rem, 10vw, 8rem) var(--pad) clamp(4rem, 8vw, 7rem);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: #060606;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: contrast(1.06) brightness(1.02);
+  z-index: -1;
+  animation: heroSlowZoom 28s var(--ease) infinite alternate;
+}
+@keyframes heroSlowZoom {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.06); }
+}
+@media (max-width: 1200px) {
+  .hero-bg::after { background-position: center center; }
+}
+@media (max-width: 880px) {
+  .hero-bg::after { background-position: 55% center; animation: none; }
+}
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    /* Soft scrim on the left for headline legibility */
+    linear-gradient(95deg, rgba(8,8,10,0.72) 0%, rgba(8,8,10,0.48) 26%, rgba(8,8,10,0.16) 52%, rgba(8,8,10,0.0) 78%),
+    /* Top fade for nav presence, bottom fade into cream content section */
+    linear-gradient(180deg, rgba(6,6,8,0.45) 0%, transparent 18%, transparent 70%, rgba(15,15,18,0.55) 92%, rgba(244,238,226,0.55) 100%),
+    /* Subtle corner vignette grounding the floor */
+    radial-gradient(ellipse 130% 90% at 50% 108%, rgba(0,0,0,0.32), transparent 60%);
+}
+@media (max-width: 880px) {
+  .hero-vignette {
+    background:
+      linear-gradient(180deg, rgba(6,6,8,0.45) 0%, rgba(8,8,10,0.32) 26%, rgba(8,8,10,0.55) 62%, rgba(15,15,18,0.88) 90%, var(--bg) 100%);
+  }
+}
+
+.hero-content {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+.hero-inner { max-width: 700px; }
+@media (min-width: 1400px) { .hero-inner { max-width: 760px; } }
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.6vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 1.3rem 0 1.4rem;
+  font-weight: 400;
+}
+.hero p.lead {
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  color: var(--text-soft);
+  max-width: 580px;
+  font-weight: 300;
+}
+
+.hero-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.8rem 0 2.2rem;
+  padding: 0.7rem 1.15rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+.hero-trust .stars {
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  font-size: 0.92rem;
+}
+.hero-trust .sep {
+  width: 1px; height: 18px; background: var(--line-strong);
+}
+.hero-trust small {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.4rem;
+}
+.btn-wa svg { width: 16px; height: 16px; color: #25d366; }
+.btn-wa:hover svg { color: #25d366; }
+
+/* Trust signals near the hero CTAs */
+.hero-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-soft);
+  letter-spacing: 0.015em;
+}
+.hero-signals span { display: inline-flex; align-items: center; gap: 0.5rem; }
+.hero-signals span::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+/* Trust signals beneath the booking submit button */
+.form-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin-top: 1rem;
+  font-size: 0.76rem;
+  font-weight: 400;
+}
+.light .form-signals { color: var(--on-cream-soft); }
+.form-signals span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.form-signals span::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--gold-deep);
+  flex-shrink: 0;
+}
+
+.hero-meta {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  pointer-events: none;
+}
+.hero-meta span { display: inline-flex; align-items: center; gap: 0.6rem; }
+.hero-meta .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+@media (max-width: 720px) { .hero-meta { display: none; } }
+
+/* Hero entrance — subtle */
+.hero .eyebrow,
+.hero h1,
+.hero p.lead,
+.hero-trust,
+.hero-ctas,
+.hero-signals {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroIn 1s var(--ease) forwards;
+}
+.hero h1 { animation-delay: 0.15s; }
+.hero p.lead { animation-delay: 0.3s; }
+.hero-trust { animation-delay: 0.45s; }
+.hero-ctas { animation-delay: 0.6s; }
+.hero-signals { animation-delay: 0.75s; }
+@keyframes heroIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   TRUST STRIP — under hero
+   ========================================================= */
+.trust-strip {
+  background: var(--bg-1);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1.6rem var(--pad);
+}
+.trust-strip-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.trust-item svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
+.trust-item strong { color: var(--text); font-weight: 600; }
+@media (max-width: 800px) {
+  .trust-strip-inner { justify-content: center; }
+  .trust-item { font-size: 0.7rem; }
+}
+
+/* =========================================================
+   SECTION HEADERS
+   ========================================================= */
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: end;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+.section-head .title-block .eyebrow { margin-bottom: 1.1rem; }
+.section-head p.lead { margin-top: 0; }
+@media (max-width: 880px) {
+  .section-head { grid-template-columns: 1fr; gap: 1.4rem; align-items: start; }
+}
+
+/* =========================================================
+   SAME-DAY MOT PROMISE — split section
+   ========================================================= */
+.promise {
+  background: var(--bg-1);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.promise-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+.promise-image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.promise-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.05);
+  transition: transform 1.2s var(--ease);
+}
+.promise-image:hover img { transform: scale(1.04); }
+.promise-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(10,10,10,0.6) 100%);
+  pointer-events: none;
+}
+.promise-image .corner {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 1.4rem;
+  font-family: var(--font-display);
+  color: var(--text);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+.promise-image .corner small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.promise-points {
+  margin-top: 2.2rem;
+  display: grid;
+  gap: 1.4rem;
+}
+.promise-point {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 1.1rem;
+  align-items: start;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+.promise-point .num {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+.promise-point h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+.promise-point p {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+@media (max-width: 880px) {
+  .promise-grid { grid-template-columns: 1fr; }
+  .promise-image { aspect-ratio: 4 / 3; max-height: 420px; }
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+.services {
+  background: var(--bg);
+}
+.services-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.service {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  padding: 2.6rem 2.2rem 2.4rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.6s var(--ease), border-color 0.6s var(--ease), box-shadow 0.6s var(--ease), background 0.6s var(--ease);
+}
+.service::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212,184,122,0.06), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.6s var(--ease);
+  pointer-events: none;
+  z-index: 0;
+}
+.service::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -140%;
+  width: 70%; height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,0.06), transparent);
+  transition: left 1.2s var(--ease);
+  pointer-events: none;
+  z-index: 1;
+}
+.service > * { position: relative; z-index: 2; }
+.service:hover {
+  transform: translateY(-5px);
+  border-color: var(--line-gold);
+  background: var(--bg-2);
+  box-shadow: 0 30px 60px -28px rgba(0,0,0,0.6), 0 12px 24px -14px rgba(0,0,0,0.35);
+}
+.service:hover::before { opacity: 1; }
+.service:hover::after { left: 130%; }
+
+.service-num {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.6rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  opacity: 0.45;
+  font-weight: 400;
+  transition: opacity 0.6s var(--ease);
+  z-index: 2;
+}
+.service:hover .service-num { opacity: 0.75; }
+
+.service-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-gold);
+  background: radial-gradient(circle at 35% 30%, rgba(212,184,122,0.10), rgba(0,0,0,0));
+  color: var(--gold);
+  margin-bottom: 1.9rem;
+  transition: transform 0.6s var(--ease), border-color 0.6s var(--ease), background 0.6s var(--ease);
+}
+.service-icon svg { width: 26px; height: 26px; }
+.service:hover .service-icon {
+  transform: scale(1.06);
+  border-color: var(--gold);
+  background: radial-gradient(circle at 35% 30%, rgba(212,184,122,0.18), rgba(0,0,0,0));
+}
+
+.service h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.9vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  margin-bottom: 0.65rem;
+}
+.service p {
+  font-size: 0.94rem;
+  color: var(--text-soft);
+  line-height: 1.72;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.service-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color 0.5s var(--ease), letter-spacing 0.5s var(--ease);
+}
+.service-arrow svg {
+  width: 12px; height: 12px;
+  transition: transform 0.5s var(--ease);
+}
+.service:hover .service-arrow {
+  color: var(--gold);
+  letter-spacing: 0.28em;
+}
+.service:hover .service-arrow svg { transform: translate(3px, -3px); }
+
+/* Light-mode services overrides */
+.light .services-grid { background: transparent; border: none; }
+.light .service {
+  background: #fbf7ec;
+  border-color: var(--line-on-cream);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.65) inset;
+}
+.light .service::before {
+  background: linear-gradient(135deg, rgba(138,107,53,0.07), transparent 55%);
+}
+.light .service::after {
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,0.45), transparent);
+  width: 55%;
+}
+.light .service:hover {
+  background: #fffaef;
+  border-color: var(--line-on-cream-gold);
+  box-shadow: 0 32px 56px -28px rgba(26,24,22,0.22), 0 12px 24px -14px rgba(26,24,22,0.10), 0 1px 0 rgba(255,255,255,0.7) inset;
+}
+.light .service-num { color: var(--gold-deep); opacity: 0.5; }
+.light .service:hover .service-num { opacity: 0.8; }
+.light .service-icon {
+  border-color: var(--line-on-cream-gold);
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.7), rgba(244,238,226,0));
+  color: var(--gold-deep);
+}
+.light .service:hover .service-icon {
+  border-color: var(--gold-deep);
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.85), rgba(244,238,226,0));
+}
+.light .service-arrow { color: var(--on-cream-dim); }
+.light .service:hover .service-arrow { color: var(--gold-deep); }
+
+.service-note {
+  max-width: var(--maxw);
+  margin: 2rem auto 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+.service-note strong { color: var(--text-soft); }
+
+@media (max-width: 980px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   LUXURY MARQUES
+   ========================================================= */
+.marques {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 50%, rgba(212,184,122,0.05), transparent 65%),
+    linear-gradient(180deg, #0f1113 0%, #181a1c 50%, #0f1113 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.marques::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 80%);
+  pointer-events: none;
+}
+.marques-head {
+  max-width: 760px;
+  margin: 0 auto clamp(3.5rem, 5.5vw, 5rem);
+  text-align: center;
+  position: relative;
+}
+.marques-head .eyebrow { justify-content: center; }
+.marques-head h2 { margin: 1.2rem 0 1.4rem; }
+.marques-head p.lead { margin: 0 auto; }
+
+.marques-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: none;
+  position: relative;
+}
+.marque {
+  padding: 2.8rem 1.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.045);
+  border-bottom: 1px solid rgba(255,255,255,0.045);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  min-height: 200px;
+  color: #d8d2c4;
+  position: relative;
+  isolation: isolate;
+  cursor: default;
+  transition: color 0.6s var(--ease);
+}
+.marque::before {
+  content: '';
+  position: absolute;
+  inset: 8% 12%;
+  background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(212,184,122,0.12), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.7s var(--ease), inset 0.7s var(--ease);
+  z-index: -1;
+  pointer-events: none;
+}
+.marque:hover::before { opacity: 1; inset: 0; }
+
+.marque .logo {
+  width: auto;
+  height: 52px;
+  max-width: 178px;
+  max-height: 64px;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.45));
+  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+.marque:hover .logo {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(198,164,106,0.45)) drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+}
+
+/* Per-brand height normalization for equal optical weight */
+.marque[aria-label="Rolls-Royce"] .logo { height: 58px; }
+.marque[aria-label="Ferrari"] .logo { height: 60px; }
+.marque[aria-label="Lamborghini"] .logo { height: 60px; }
+.marque[aria-label="Mercedes-Benz"] .logo { height: 56px; }
+.marque[aria-label="BMW"] .logo { height: 56px; }
+.marque[aria-label="Bentley"] .logo { height: 44px; }
+.marque[aria-label="Porsche"] .logo { height: 56px; }
+.marque[aria-label="Audi"] .logo { height: 32px; }
+.marque[aria-label="McLaren"] .logo { height: 24px; }
+.marque[aria-label="Range Rover"] .logo { height: 15px; max-width: 195px; }
+
+.marque small {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  font-weight: 400;
+  transition: color 0.7s var(--ease), letter-spacing 0.7s var(--ease);
+}
+.marque:hover small {
+  color: rgba(212,184,122,0.6);
+  letter-spacing: 0.48em;
+}
+.marque:nth-child(5n) { border-right: none; }
+.marque:nth-last-child(-n+5) { border-bottom: none; }
+
+@media (max-width: 980px) {
+  .marques-grid { grid-template-columns: repeat(3, 1fr); }
+  .marque { border-right: 1px solid rgba(255,255,255,0.045); border-bottom: 1px solid rgba(255,255,255,0.045); min-height: 180px; }
+  .marque:nth-child(5n) { border-right: 1px solid rgba(255,255,255,0.045); }
+  .marque:nth-child(3n) { border-right: none; }
+  .marque:nth-last-child(-n+5) { border-bottom: 1px solid rgba(255,255,255,0.045); }
+}
+@media (max-width: 600px) {
+  .marques-grid { grid-template-columns: repeat(2, 1fr); }
+  .marque { border-right: 1px solid rgba(255,255,255,0.045); min-height: 160px; padding: 2.2rem 1rem 1.6rem; }
+  .marque:nth-child(3n) { border-right: 1px solid rgba(255,255,255,0.045); }
+  .marque:nth-child(2n) { border-right: none; }
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+.stats {
+  background: var(--bg);
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+.stats-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.stat {
+  padding: 2.6rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+.stat:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.5vw, 3.6rem);
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.stat-num .unit { color: var(--gold); font-size: 0.6em; vertical-align: top; margin-left: 0.1em; }
+.stat-rule {
+  width: 28px; height: 1px;
+  background: var(--gold);
+  margin: 1rem auto 1rem;
+}
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+@media (max-width: 760px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .stat:nth-child(2n) { border-right: none; }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
+}
+
+/* =========================================================
+   WHY US — clean 4-column
+   ========================================================= */
+.why {
+  background: var(--bg);
+}
+.why-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.visit-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 880px) { .visit-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .visit-grid { grid-template-columns: 1fr; } }
+.why-card .why-hours {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 0.3rem;
+  column-gap: 1rem;
+  font-size: 0.86rem;
+}
+.why-card .why-hours .d { color: var(--text-soft); }
+.light .why-card .why-hours .d { color: var(--on-cream-soft); }
+.why-card .why-hours .t { font-variant-numeric: tabular-nums; }
+.why-card {
+  padding: 2rem 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: border-color var(--t) var(--ease), transform var(--t) var(--ease);
+}
+.why-card:hover {
+  border-color: var(--line-gold);
+  transform: translateY(-3px);
+}
+.why-card .why-icon {
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.why-card .why-icon svg { width: 26px; height: 26px; }
+.why-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.why-card p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+  font-weight: 300;
+}
+@media (max-width: 1080px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   REVIEWS
+   ========================================================= */
+.reviews {
+  background: var(--bg-1);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.reviews-head {
+  max-width: 720px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+.reviews-head .eyebrow { justify-content: center; }
+.reviews-head h2 { margin: 1rem 0 1.4rem; }
+.reviews-meta {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+.review-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--line);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.review-pill .stars { color: var(--gold); letter-spacing: 0.1em; }
+.review-pill strong { color: var(--text); font-weight: 600; }
+
+.review-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 2rem 1.8rem;
+  display: flex; flex-direction: column;
+  gap: 1.2rem;
+  transition: border-color var(--t) var(--ease), transform var(--t) var(--ease);
+}
+.review-card:hover {
+  border-color: var(--line-gold);
+  transform: translateY(-3px);
+}
+.review-stars { color: var(--gold); letter-spacing: 0.18em; font-size: 0.92rem; }
+.review-vehicle {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: -0.2rem;
+}
+.review-vehicle span { opacity: 0.5; margin: 0 0.15rem; }
+.light .review-vehicle { color: var(--gold-deep); }
+.review-text {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  flex: 1;
+}
+.review-author {
+  display: flex; align-items: center; gap: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.review-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #8c7032);
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: #0a0a0a;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.review-info { display: flex; flex-direction: column; line-height: 1.3; }
+.review-name { font-size: 0.92rem; font-weight: 600; color: var(--text); }
+.review-date { font-size: 0.74rem; color: var(--text-dim); letter-spacing: 0.04em; }
+
+.reviews-cta {
+  max-width: var(--maxw);
+  margin: 2.5rem auto 0;
+  text-align: center;
+}
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.3rem;
+  border: 1px solid var(--line-strong);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+.google-badge:hover { border-color: var(--gold); background: rgba(201,165,91,0.05); }
+.google-badge svg { width: 18px; height: 18px; }
+
+/* "View all reviews" — mobile-only progressive disclosure */
+.reviews-toggle {
+  display: none;
+  margin: 0 auto 1rem;
+  padding: 0.85rem 1.5rem;
+  background: transparent;
+  border: 1px solid var(--line-on-cream-strong);
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--on-cream);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.reviews-toggle:hover { border-color: var(--gold-deep); color: var(--gold-deep); background: rgba(150,116,52,0.04); }
+
+@media (max-width: 980px) {
+  .review-grid { grid-template-columns: 1fr; }
+  .review-card { padding: 1.6rem 1.4rem; }
+}
+
+/* =========================================================
+   BOOKING / CONTACT
+   ========================================================= */
+.booking {
+  background: var(--bg);
+}
+.booking-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: start;
+}
+@media (max-width: 980px) {
+  .booking-grid { grid-template-columns: 1fr; }
+}
+
+.contact-block { display: flex; flex-direction: column; gap: 1.6rem; }
+.contact-row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 1.2rem;
+  align-items: start;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+}
+.contact-row:first-child { border-top: none; padding-top: 0; }
+.contact-icon {
+  width: 40px; height: 40px;
+  border: 1px solid var(--line-gold);
+  display: grid; place-items: center;
+  color: var(--gold);
+}
+.contact-icon svg { width: 18px; height: 18px; }
+.contact-info {
+  display: flex; flex-direction: column; gap: 0.2rem;
+}
+.contact-info small {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.contact-info a, .contact-info span {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 400;
+  transition: color var(--t-fast);
+}
+.contact-info a:hover { color: var(--gold); }
+.contact-info .lines { line-height: 1.55; }
+
+.hours {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 0.4rem;
+  column-gap: 1rem;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.hours .day { color: var(--text-soft); }
+.hours .time { color: var(--text); font-variant-numeric: tabular-nums; }
+
+.booking-form {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: clamp(1.8rem, 3vw, 2.6rem);
+}
+.booking-form h3 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.booking-form .form-sub {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  margin-bottom: 1.6rem;
+  font-weight: 300;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1rem;
+}
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field.full { grid-column: 1 / -1; }
+.field label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.field input, .field select, .field textarea {
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  padding: 0.85rem 0.95rem;
+  font-size: 0.95rem;
+  transition: border-color var(--t-fast);
+  outline: none;
+  font-family: inherit;
+}
+.field input::placeholder, .field textarea::placeholder { color: var(--text-dim); }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
+.field select { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%23c9a55b' stroke-width='1.5' d='M1 1l5 5 5-5'/></svg>"); background-repeat: no-repeat; background-position: right 0.95rem center; padding-right: 2.4rem; }
+.field textarea { resize: vertical; min-height: 110px; }
+.form-submit { width: 100%; justify-content: center; margin-top: 1.4rem; padding: 1.1rem 1.6rem; }
+.form-submit[disabled] { opacity: 0.6; pointer-events: none; }
+/* Honeypot — modern visually-hidden technique.
+   Zero-dimension + opacity:0 + z-index below + pointer-events disabled
+   is harder for box-geometry-aware bots to flag than the legacy
+   left:-9999px offscreen trick. */
+.hp-field {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+/* Accessible form status message */
+.form-status {
+  margin-top: 0.95rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  min-height: 1.3em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.form-status.is-error { color: #a8341c; }
+.form-status.is-success { color: var(--gold-deep); }
+/* Invalid field cue */
+.field input.invalid, .field select.invalid, .field textarea.invalid {
+  border-color: #a8341c;
+}
+@media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   DIRECT-CONTACT CARD — replaces booking form
+   ========================================================= */
+.contact-card {
+  position: relative;
+  padding: clamp(2rem, 3.5vw, 3rem);
+  background: linear-gradient(180deg, #fbf7ec 0%, #f4eee2 100%);
+  border: 1px solid var(--line-on-cream);
+  box-shadow: 0 30px 60px -28px rgba(26,24,22,0.22), 0 8px 22px -10px rgba(26,24,22,0.09);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  isolation: isolate;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroIn 1s var(--ease) 0.2s forwards;
+}
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(138,107,53,0.06), transparent 60%),
+    radial-gradient(ellipse 60% 60% at 100% 100%, rgba(212,184,122,0.05), transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+.contact-card .eyebrow {
+  color: var(--gold-deep);
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+.contact-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.6vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.012em;
+  color: var(--on-cream);
+  margin-bottom: 0.7rem;
+}
+.contact-card .lead-sub {
+  font-size: 1rem;
+  color: var(--on-cream-soft);
+  margin-bottom: 1.4rem;
+  font-weight: 300;
+  line-height: 1.55;
+}
+.contact-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.76rem;
+  color: var(--on-cream-soft);
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--line-on-cream);
+  background: rgba(255,255,255,0.55);
+  margin-bottom: 1.6rem;
+  align-self: flex-start;
+  letter-spacing: 0.01em;
+}
+.contact-rating .stars { color: var(--gold-deep); letter-spacing: 0.14em; }
+.contact-rating strong { color: var(--on-cream); font-weight: 600; }
+
+.contact-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+.contact-cta-buttons .btn {
+  flex: 1;
+  min-width: 180px;
+  justify-content: center;
+  padding: 1.05rem 1.4rem;
+  transition: transform 0.35s var(--ease), background 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.btn-wa-primary {
+  background: #25d366;
+  border-color: #25d366;
+  color: #ffffff;
+}
+.btn-wa-primary:hover {
+  background: #1ebe5b;
+  border-color: #1ebe5b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px -12px rgba(37,211,102,0.55);
+}
+.btn-wa-primary svg { color: #ffffff; width: 16px; height: 16px; }
+
+.contact-replies {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.78rem;
+  color: var(--on-cream-soft);
+  margin-bottom: 1.2rem;
+}
+.contact-replies::before {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 0 4px rgba(37,211,102,0.18);
+  animation: dotPulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(37,211,102,0.18); }
+  50%      { box-shadow: 0 0 0 7px rgba(37,211,102,0.06); }
+}
+
+.contact-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-on-cream-strong), transparent);
+  margin: 0.5rem 0 1.1rem;
+}
+.contact-trust {
+  font-size: 0.84rem;
+  color: var(--on-cream-soft);
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+}
+.contact-trust::before {
+  content: '★';
+  color: var(--gold-deep);
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 540px) {
+  .contact-cta-buttons .btn { flex: 1 1 100%; min-width: 0; }
+}
+
+/* Map */
+.map-wrap {
+  max-width: var(--maxw);
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
+  height: 380px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.map-wrap iframe {
+  width: 100%; height: 100%; border: 0;
+  filter: grayscale(0.7) invert(0.92) hue-rotate(180deg) brightness(0.98) contrast(0.95);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+  background: #060606;
+  border-top: 1px solid var(--line);
+  padding: clamp(3.5rem, 6vw, 5rem) var(--pad) 1.6rem;
+}
+.footer-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+.footer-brand p {
+  margin-top: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  font-weight: 300;
+  max-width: 36ch;
+  line-height: 1.7;
+}
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+.footer-col li, .footer-col a {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  font-weight: 300;
+  transition: color var(--t-fast);
+}
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  max-width: var(--maxw);
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+.footer-bottom .stars { color: var(--gold); letter-spacing: 0.16em; }
+@media (max-width: 880px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 540px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   FLOATING WHATSAPP + MOBILE STICKY CTA
+   ========================================================= */
+.whatsapp-float {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 5.6rem;
+  z-index: 70;
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: #25d366;
+  display: grid; place-items: center;
+  color: white;
+  box-shadow: 0 12px 28px rgba(37,211,102,0.32), 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform var(--t-fast) var(--ease);
+}
+.whatsapp-float:hover { transform: scale(1.06); }
+.whatsapp-float svg { width: 26px; height: 26px; }
+@media (min-width: 961px) { .whatsapp-float { bottom: 1.5rem; } }
+
+.mobile-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 75;
+  display: none;
+  background: rgba(10,10,10,0.96);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+}
+.mobile-bar a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.85rem 0.4rem 0.95rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  border-right: 1px solid var(--line);
+  transition: background var(--t-fast);
+}
+.mobile-bar a:last-child { border-right: none; }
+.mobile-bar a:hover { background: rgba(255,255,255,0.04); }
+.mobile-bar a svg { width: 18px; height: 18px; color: var(--gold); }
+.mobile-bar .call svg { color: var(--gold); }
+.mobile-bar .whatsapp svg { color: #25d366; }
+.mobile-bar .book { background: var(--gold); color: #0a0a0a; }
+.mobile-bar .book svg { color: #0a0a0a; }
+.mobile-bar .book:hover { background: var(--gold-bright); }
+@media (max-width: 720px) {
+  .mobile-bar { display: flex; }
+  body { padding-bottom: 72px; }
+  .whatsapp-float { display: none; }
+}
+
+/* =========================================================
+   INSIDE OUR WORKSHOP — real photo gallery
+   ========================================================= */
+.workshop {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 0%, rgba(212,184,122,0.05), transparent 60%),
+    linear-gradient(180deg, var(--ink-deep) 0%, var(--bg-1) 55%, var(--ink-deep) 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.workshop-masonry {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  column-count: 3;
+  column-gap: 1.25rem;
+}
+@media (max-width: 900px) { .workshop-masonry { column-count: 2; column-gap: 1rem; } }
+@media (max-width: 560px) { .workshop-masonry { column-count: 1; } }
+.ws-item {
+  break-inside: avoid;
+  margin: 0 0 1.25rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+}
+.ws-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.9) contrast(1.04);
+  transition: transform 0.8s var(--ease), filter 0.8s var(--ease);
+}
+.ws-item:hover img { transform: scale(1.045); filter: brightness(1.02) contrast(1.05); }
+.ws-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 48%, rgba(8,9,11,0.55) 72%, rgba(8,9,11,0.92) 100%);
+  pointer-events: none;
+  transition: opacity 0.6s var(--ease);
+}
+.ws-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 2;
+  padding: 1.35rem 1.4rem 1.2rem;
+}
+.ws-caption span {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+.ws-caption strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.22rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #f3eee2;
+}
+.workshop-note {
+  max-width: var(--maxw);
+  margin: 2.4rem auto 0;
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  font-weight: 300;
+}
+.workshop-note a { color: var(--gold); border-bottom: 1px solid var(--line-gold); padding-bottom: 1px; }
+.workshop-note a:hover { color: var(--gold-bright); }
+
+/* =========================================================
+   REVEAL ON SCROLL
+   ========================================================= */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); animation: revealSafetyNet 0.01s 1.6s forwards; }
+.reveal.in { opacity: 1; transform: translateY(0); animation: none; }
+@keyframes revealSafetyNet { to { opacity: 1; transform: translateY(0); } }
+
+/* =========================================================
+   PRINT / REDUCED MOTION
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visibility */
+/* Bespoke focus ring — keyboard navigation feels intentional and premium */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+  transition: outline-offset 0.15s ease;
+}
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Visually-hidden "Skip to main content" — appears on keyboard focus */
+.skip-link {
+  position: fixed;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--gold);
+  color: #0a0a0a;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  box-shadow: 0 12px 26px -10px rgba(0,0,0,0.55);
+  transform: translateY(-150%);
+  transition: transform 0.25s var(--ease);
+}
+.skip-link:focus,
+.skip-link:focus-visible { transform: translateY(0); outline-offset: 6px; }
+
+/* Selection */
+::selection { background: var(--gold); color: #0a0a0a; }
+
+/* =========================================================
+   FILM GRAIN — cinematic overlay
+   ========================================================= */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 90;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0 0.85  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* =========================================================
+   CINEMATIC PLATE — luxury image banner between sections
+   ========================================================= */
+.cinematic {
+  position: relative;
+  min-height: clamp(380px, 50vh, 520px);
+  padding: clamp(4rem, 7vw, 6rem) var(--pad);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.cinematic-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(8,8,10,0.55) 0%, rgba(10,10,10,0.7) 60%, rgba(10,10,10,0.92) 100%),
+    linear-gradient(90deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.35) 50%, rgba(10,10,10,0.6) 100%),
+    url('https://images.unsplash.com/photo-1740098160485-d098fbf42814?w=2000&q=85&auto=format&fit=crop') center/cover no-repeat;
+  filter: contrast(1.05) saturate(0.92);
+  transform: scale(1.04);
+}
+.cinematic-content {
+  position: relative;
+  max-width: var(--maxw);
+  width: 100%;
+  margin: 0 auto;
+}
+.cinematic h2 {
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  max-width: 22ch;
+  margin: 1rem 0 1.3rem;
+  font-weight: 400;
+}
+.cinematic p {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  max-width: 52ch;
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+}
+.cinematic-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.cinematic-meta .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+/* =========================================================
+   MOBILE OPTIMIZATION — refinement only (desktop untouched)
+   Applied only at ≤768px / ≤480px.
+   ========================================================= */
+@media (max-width: 768px) {
+  /* ────────────────────────────────────────────────────────────
+     MOBILE COMPRESSION MODE
+     Compress vertical rhythm ~25-30% by overriding the root
+     design tokens. Every section, gap, and structural-spacing
+     token now resolves to its tighter mobile value via the
+     same cascade the desktop uses — no per-component tweaks.
+     ──────────────────────────────────────────────────────────── */
+  :root {
+    --section:   clamp(3.75rem, 8vw, 4.75rem);
+    --pad:       1.25rem;
+    --space-md:  1.25rem;
+    --space-lg:  2.5rem;
+    --space-xl:  3.75rem;
+  }
+  /* Tighten the lazy-render placeholder to match the new compressed
+     rhythm — stops CLS jumps when users flick rapidly down the page. */
+  section:not(.hero) { contain-intrinsic-size: auto 400px; }
+
+  /* General section rhythm — tighter vertical padding */
+  section { padding: 3.6rem 1.15rem; }
+
+  /* Hero — auto height, top padding clears 92px sticky nav, no scroll voids */
+  .hero {
+    min-height: auto;
+    padding-top: calc(3.5rem + 92px);
+    padding-bottom: 3.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 8.5vw, 2.7rem);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    margin: 0.85rem 0 1rem !important;
+  }
+  .hero p.lead { font-size: 0.98rem; line-height: 1.6; margin-bottom: 1.4rem; }
+  .hero-trust { margin: 1rem 0 1.2rem; padding: 0.5rem 0.9rem; }
+  .hero-trust small { font-size: 0.66rem; letter-spacing: 0.14em; }
+  .hero-ctas { gap: 0.55rem; }
+  .hero-signals { margin-top: 0.9rem; font-size: 0.72rem; gap: 0.3rem 0.9rem; }
+  .hero-bg::after { animation: none; }
+  .hero-eyebrow, .hero .eyebrow { font-size: 0.65rem; letter-spacing: 0.28em; }
+
+  /* Headings — slightly compressed, still editorial */
+  .h-section { font-size: clamp(1.85rem, 7.5vw, 2.35rem); line-height: 1.08; letter-spacing: -0.015em; }
+  .eyebrow { font-size: 0.66rem; letter-spacing: 0.28em; }
+  .lead { font-size: 0.96rem; line-height: 1.65; }
+  .section-head,
+  .reviews-head,
+  .marques-head { margin-bottom: 2rem !important; gap: 0.85rem; }
+
+  /* Trust strip — clean 2-column grid */
+  .trust-strip { padding: 1.1rem 1.15rem; }
+  .trust-strip-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 1rem; justify-content: stretch; }
+  .trust-item { font-size: 0.62rem; letter-spacing: 0.1em; gap: 0.5rem; }
+  .trust-item svg { width: 15px; height: 15px; }
+
+  /* Services — tighter cards, less padding */
+  .services-grid { gap: 0.9rem; }
+  .service { padding: 1.75rem 1.25rem !important; }
+  .service-icon { width: 54px; height: 54px; margin-bottom: 1.25rem; }
+  .service-icon svg { width: 22px; height: 22px; }
+  .service h3 { font-size: 1.28rem; line-height: 1.18; }
+  .service p { font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.05rem; }
+  .service-num { top: 1.05rem; right: 1.2rem; font-size: 0.85rem; }
+  .service-arrow { letter-spacing: 0.18em; font-size: 0.66rem; }
+
+  /* Promise section — tighter */
+  .promise-grid { gap: 2rem; }
+  .promise-points { gap: 1.05rem; margin-top: 1.6rem; }
+  .promise-point { padding-top: 1.1rem; }
+  .promise-point h4 { font-size: 0.96rem; }
+  .promise-point p { font-size: 0.88rem; }
+
+  /* Stats */
+  .stat { padding: 1.6rem 0.75rem; }
+  .stat-num { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .stat-label { font-size: 0.6rem; letter-spacing: 0.18em; }
+  .stat-rule { width: 22px; margin: 0.7rem auto 0.7rem; }
+
+  /* Workshop masonry — tighter gutters */
+  .workshop-masonry { column-gap: 0.85rem; }
+  .ws-item { margin-bottom: 0.85rem; }
+  .ws-caption { padding: 0.95rem 1rem 0.85rem; }
+  .ws-caption span { font-size: 0.55rem; letter-spacing: 0.22em; }
+  .ws-caption strong { font-size: 1.05rem; }
+  .workshop-note { margin-top: 1.6rem; font-size: 0.85rem; }
+
+  /* Marques — uniform compact cells */
+  .marque { min-height: 130px; padding: 1.6rem 0.85rem 1.2rem; gap: 0.85rem; }
+  .marque .logo { height: 32px; max-width: 110px; }
+  .marque[aria-label="Rolls-Royce"] .logo { height: 42px; }
+  .marque[aria-label="Ferrari"] .logo,
+  .marque[aria-label="Lamborghini"] .logo { height: 44px; }
+  .marque[aria-label="Mercedes-Benz"] .logo,
+  .marque[aria-label="BMW"] .logo { height: 42px; }
+  .marque[aria-label="Bentley"] .logo { height: 32px; }
+  .marque[aria-label="Porsche"] .logo { height: 38px; }
+  .marque[aria-label="Audi"] .logo { height: 22px; }
+  .marque[aria-label="McLaren"] .logo { height: 18px; }
+  .marque[aria-label="Range Rover"] .logo { height: 12px; max-width: 150px; }
+  .marque small { font-size: 0.52rem; letter-spacing: 0.36em; }
+
+  /* Why / Visiting cards */
+  .why-card { padding: 1.75rem 1.25rem !important; }
+  .why-card h3 { font-size: 1.1rem; }
+  .why-card p { font-size: 0.88rem; }
+  .why-card .why-icon { width: 36px; height: 36px; margin-bottom: 0.95rem; }
+
+  /* Cinematic plate */
+  .cinematic { min-height: auto; padding: 3.2rem 1.15rem; }
+  .cinematic h2 { font-size: clamp(1.7rem, 7vw, 2.15rem); }
+  .cinematic p { font-size: 0.96rem; }
+
+  /* Reviews — tighter cards */
+  .reviews-head h2 { margin: 0.7rem 0 1.1rem; }
+  .reviews-meta { gap: 0.4rem; margin-top: 0.6rem; }
+  .review-pill { font-size: 0.62rem; letter-spacing: 0.08em; padding: 0.4rem 0.75rem; }
+  .review-grid { gap: 0.9rem; }
+  .review-card { padding: 1.75rem 1.25rem !important; gap: 0.85rem; }
+  .booking-form { padding: 1.75rem 1.25rem !important; }
+  .review-text { font-size: 0.98rem; line-height: 1.5; }
+  .reviews-cta { margin-top: 1.6rem; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+  .review-grid:not(.expanded) > .review-card:nth-child(n+4) { display: none; }
+  .reviews-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .google-badge { font-size: 0.72rem; padding: 0.7rem 1.05rem; }
+
+  /* Direct-contact section */
+  .booking-grid { gap: 1.6rem; }
+  .contact-row { padding: 0.95rem 0; grid-template-columns: 36px 1fr; gap: 0.85rem; }
+  .contact-icon { width: 34px; height: 34px; }
+  .contact-icon svg { width: 16px; height: 16px; }
+  .contact-info a, .contact-info span { font-size: 0.95rem; }
+  .contact-card { padding: 1.7rem 1.4rem; }
+  .contact-card h3 { font-size: 1.45rem; line-height: 1.18; }
+  .contact-card .lead-sub { font-size: 0.94rem; margin-bottom: 1.2rem; }
+  .contact-cta-buttons { gap: 0.55rem; margin-bottom: 0.9rem; }
+  .contact-trust { font-size: 0.78rem; }
+  .map-wrap { margin-top: 1.9rem; height: 260px; }
+
+  /* Footer */
+  footer { padding: 3rem 1.15rem 1.4rem; }
+  .footer-grid { gap: 1.8rem; }
+  .footer-bottom { margin-top: 2rem; padding-top: 1.1rem; font-size: 0.72rem; }
+
+  /* Buttons — taller, thumb-friendly, less letter spacing */
+  .btn { padding: 1.05rem 1.4rem; font-size: 0.78rem; letter-spacing: 0.12em; }
+  .nav-cta { padding: 0.8rem 1.1rem; letter-spacing: 0.14em; font-size: 0.72rem; }
+
+  /* Mobile menu — smoother, smaller text, body scroll lock */
+  .mobile-menu { gap: 1.4rem; padding-top: env(safe-area-inset-top); }
+  .mobile-menu a { font-size: 1.5rem; }
+  body.menu-open { overflow: hidden; touch-action: none; }
+
+  /* Sticky mobile CTA bar — safe-area + refined feel.
+     calc(1rem + env(...)) keeps the touch surface a finger's width
+     above the home-indicator swipe gesture so the OS gesture and
+     our CTA never collide. */
+  .mobile-bar { padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); }
+  .mobile-bar a { padding-top: 0.95rem; padding-bottom: 1rem; font-size: 0.6rem; letter-spacing: 0.16em; }
+  .mobile-bar .directions { background: var(--gold); color: #0a0a0a; }
+  .mobile-bar .directions svg { color: #0a0a0a; }
+  .mobile-bar .directions:hover { background: var(--gold-bright); }
+
+  /* Performance — kill heavy effects on phones */
+  body::after { display: none; }                                     /* film grain off */
+  .nav { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(10,10,10,0.94); }
+  .nav.scrolled { background: rgba(10,10,10,0.96); }
+  .mobile-menu { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(10,10,10,0.985); }
+  .workshop { background: linear-gradient(180deg, var(--ink-deep), var(--bg-1)); }
+  .marques { background: linear-gradient(180deg, #0f1113, var(--bg-1)); }
+  .marques::before { display: none; }
+  .hero-bg { animation: none; }
+}
+
+/* Very narrow phones — small tightening pass */
+@media (max-width: 480px) {
+  section { padding: 3.1rem 1rem; }
+  .hero { padding: 6rem 1rem 3rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .h-section { font-size: 1.85rem; }
+  .stat-num { font-size: 2.1rem; }
+  .marque { min-height: 115px; padding: 1.25rem 0.6rem 1rem; }
+  .ws-caption strong { font-size: 0.98rem; }
+  .contact-card h3 { font-size: 1.32rem; }
+}
+
+/* =========================================================
+   MOBILE — HORIZONTAL SCROLL-SNAP TRACKS (Zero-JS Carousels)
+   Converts dense card grids to single-row horizontally
+   swipeable tracks on phones to eliminate scroll fatigue.
+   Pure CSS, momentum scrolling on iOS, edge-reveal of next card.
+   Desktop layouts are untouched.
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* Shared scroll-track behaviour applied to each grid below */
+  .services-grid,
+  .why-grid,
+  .marques-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline-start: 1.15rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    /* Bleed the track to the section edges so cards anchor flush with the
+       viewport, while leaving a soft "peek" of the next card on the right */
+    margin-inline: -1.15rem;
+    padding-inline: 1.15rem;
+    padding-block-end: 0.6rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Reset grid-only properties from the desktop rules */
+    grid-template-columns: none;
+    border: none;
+  }
+  .services-grid::-webkit-scrollbar,
+  .why-grid::-webkit-scrollbar,
+  .marques-grid::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+  /* ----- Services track ----- */
+  .services-grid { gap: 0.85rem; }
+  .services-grid > .service {
+    flex: 0 0 82vw;
+    max-width: 360px;
+    min-width: 260px;
+    scroll-snap-align: start;
+    margin: 0; /* override grid margins */
+  }
+
+  /* ----- Why-Us / Visiting cards track ----- */
+  .why-grid { gap: 0.85rem; }
+  .why-grid > .why-card {
+    flex: 0 0 78vw;
+    max-width: 320px;
+    min-width: 240px;
+    scroll-snap-align: start;
+    margin: 0;
+  }
+
+  /* ----- Marques (brand logos) track ----- */
+  .marques-grid {
+    padding-block: 0.4rem;
+    padding-block-end: 0.4rem;
+    gap: 0;
+  }
+  .marques-grid > .marque {
+    flex: 0 0 38vw;
+    max-width: 180px;
+    min-width: 130px;
+    min-height: 130px;
+    scroll-snap-align: start;
+    /* Reset desktop borders, use a single subtle right divider per cell */
+    border: none;
+    border-right: 1px solid rgba(255,255,255,0.045);
+    padding: 1.4rem 0.8rem 1.1rem;
+  }
+  .marques-grid > .marque:last-child { border-right: none; }
+  /* Override the desktop nth-child border patterns inside the track */
+  .marques-grid > .marque:nth-child(3n),
+  .marques-grid > .marque:nth-child(5n),
+  .marques-grid > .marque:nth-child(2n),
+  .marques-grid > .marque:nth-last-child(-n+5) {
+    border-right: 1px solid rgba(255,255,255,0.045);
+    border-bottom: none;
+  }
+  .marques-grid > .marque:last-child { border-right: none; }
+
+  /* Subtle visual cue: a fading gradient on the right edge of the track
+     hints "more →" without needing JS arrows. Section keeps its own bg. */
+  .services, .why, .marques { position: relative; }
+  .services::after, .why::after, .marques::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 32px;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(10,12,14,0.18));
+    opacity: 0.55;
+    z-index: 1;
+  }
+  .services::after, .why.light::after, .marques::after { display: none; }
+  /* Only show the fade on dark-mood sections where it reads cleanly */
+  .marques::after { background: linear-gradient(90deg, transparent, rgba(15,17,19,0.55)); display: block; }
+
+  /* ───── Reviews track — 85% peek carousel ─────
+     Independent from the services/why/marques track because reviews
+     need a wider edge-to-edge card with a 15% peek of the next review
+     showing on the right edge as a wayfinding cue. Zero-JS, native
+     scroll-snap + iOS momentum scrolling. */
+  .reviews-grid,
+  .review-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-inline-start: var(--pad);
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    /* Bleed track edge-to-edge so cards anchor flush with viewport */
+    margin: 0 calc(var(--pad) * -1) !important;
+    padding: 0 var(--pad) 0.6rem;
+    gap: 0.85rem;
+    /* Hide native scrollbar across engines */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .reviews-grid::-webkit-scrollbar,
+  .review-grid::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+  .reviews-grid > .review-card,
+  .review-grid > .review-card {
+    flex: 0 0 85% !important;
+    width: 85% !important;
+    scroll-snap-align: start !important;
+    margin: 0;
+  }
+
+  /* Reveal all reviews inside the scroll track — the
+     ":nth-child(n+4) {display:none}" rule used for vertical
+     stacking would break the horizontal peek cue. */
+  .review-grid:not(.expanded) > .review-card:nth-child(n+4) { display: flex !important; }
+  /* The "View all reviews" toggle is unnecessary inside a horizontal track */
+  .reviews-cta { margin-top: 1.4rem; }
+}
+
+/* =========================================================
+   MOBILE — iOS form-zoom fix
+   Any input/textarea/select on a phone gets >=16px to stop
+   iOS Safari auto-zooming the viewport on focus. Defensive —
+   the booking form is currently replaced by the direct-contact
+   card, but this protects any future form additions.
+   ========================================================= */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px;        /* hard 16px — iOS zoom threshold */
+    line-height: 1.4;
+  }
+}
+
+/* =========================================================
+   TOUCH-ONLY OVERRIDES
+   - Neutralise "sticky hover" artifacts that appear when a
+     finger tap leaves a hover state lingering on iOS Safari.
+   - Replace hover affordances with instant :active tap feedback
+     (transform + opacity) for tactile responsiveness.
+   - Enforce 44x44 minimum tap targets per Apple HIG.
+   ========================================================= */
+@media (hover: none) {
+  /* Neutralise lingering hover transforms / colours on tap */
+  .btn:hover,
+  .nav-cta:hover,
+  .service:hover,
+  .why-card:hover,
+  .review-card:hover,
+  .marque:hover,
+  .marque:hover .logo,
+  .marque:hover small,
+  .ws-item:hover img,
+  .promise-image:hover img,
+  .google-badge:hover,
+  .footer-col a:hover,
+  .nav-links a:hover,
+  .topbar a:hover {
+    transform: none;
+    box-shadow: none;
+    letter-spacing: inherit;
+  }
+
+  /* Instant tactile feedback on actual tap */
+  .btn:active,
+  .nav-cta:active,
+  .reviews-toggle:active,
+  .menu-toggle:active,
+  .mobile-menu .close:active,
+  .mobile-bar a:active,
+  .whatsapp-float:active,
+  .google-badge:active,
+  .service-arrow:active,
+  .workshop-note a:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+    transition: transform 0.08s ease-out, opacity 0.08s ease-out;
+  }
+
+  /* Soft "press" feedback on full cards without breaking layout */
+  .service:active,
+  .why-card:active,
+  .review-card:active,
+  .marque:active {
+    transform: scale(0.99);
+    transition: transform 0.1s ease-out;
+  }
+}
+
+/* =========================================================
+   MOBILE — 44x44 minimum tap-target enforcement
+   Defensive sweep across small text links so every touchable
+   element meets Apple HIG ≥44pt requirements.
+   ========================================================= */
+@media (max-width: 768px) {
+  .nav-links a,
+  .footer-col a,
+  .topbar a,
+  .contact-info a,
+  .service-arrow,
+  .reviews-toggle,
+  .google-badge {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .footer-col li { line-height: 1.5; }
+  .nav-cta,
+  .menu-toggle,
+  .mobile-menu .close,
+  .mobile-bar a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* =========================================================
+   MOBILE — INTERACTION LAYER POLISH (≤768px)
+   1. iOS form-zoom fix (16px minimum input font-size)
+   2. GPU-accelerated mobile menu + overscroll containment
+   3. Safe-area inset support for sticky/fixed surfaces
+   ========================================================= */
+@media (max-width: 768px) {
+  /* 1. iOS Safari auto-zooms on focus when a field has font-size < 16px */
+  input, select, textarea { font-size: 16px; }
+
+  /* 2. Mobile menu — compositor-only animation + overscroll containment */
+  .mobile-menu {
+    transform: translateY(8px);
+    will-change: opacity, transform;
+    transition: opacity var(--t) var(--ease), transform var(--t) var(--ease);
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+  .mobile-menu.open { transform: translateY(0); }
+
+  /* 3. Hardware notch & safe-area compliance */
+  .nav {
+    padding-left: max(var(--pad), env(safe-area-inset-left));
+    padding-right: max(var(--pad), env(safe-area-inset-right));
+  }
+  .mobile-menu {
+    padding-top: max(2rem, env(safe-area-inset-top));
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .mobile-menu .close { top: max(1.4rem, env(safe-area-inset-top)); }
+  .mobile-bar {
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .mobile-menu { padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); }
+  .whatsapp-float { bottom: calc(1.4rem + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* =========================================================
+   HOVER-CAPABLE-ONLY DECORATIONS
+   Reinforces the architectural rule: any decorative hover state
+   (lift transforms, shadow expansions, gold colour switches) is
+   only meaningful on a device with a real hover capability —
+   mouse, trackpad, stylus over. Touch screens skip this block
+   entirely. The (hover: none) block below provides defensive
+   cleanup for any legacy :hover declarations elsewhere in the
+   stylesheet that aren't yet wrapped.
+   ========================================================= */
+@media (hover: hover) and (pointer: fine) {
+  .service:hover { transform: translateY(-2px); }
+  .why-card:hover { transform: translateY(-2px); }
+  .review-card:hover { transform: translateY(-2px); }
+  .marque:hover { transform: translateY(-2px); }
+  .ws-item:hover img { transform: scale(1.04); }
+  .promise-image:hover img { transform: scale(1.03); }
+  .whatsapp-float:hover { transform: scale(1.08); }
+  .google-badge:hover { transform: translateY(-1px); }
+}
+
+/* =========================================================
+   TOUCH-DEVICE HOVER CLEANUP
+   On touch devices :hover sticks after a tap, leaving cards
+   "lifted" and buttons recoloured until the next interaction.
+   Cancel those transforms and replace with a tactile :active.
+   ========================================================= */
+@media (hover: none) {
+  .btn:hover, .nav-cta:hover, .service:hover, .why-card:hover,
+  .review-card:hover, .marque:hover, .ws-item:hover,
+  .marque:hover .logo, .ws-item:hover img, .service:hover .service-icon,
+  .reviews-toggle:hover, .google-badge:hover {
+    transform: none;
+  }
+  .btn:active, .nav-cta:active, .menu-toggle:active,
+  .contact-cta-buttons .btn:active, .reviews-toggle:active,
+  .google-badge:active, .mobile-bar a:active {
+    transform: scale(0.97);
+    transition: transform 0.08s ease;
+  }
+  .service:active, .why-card:active, .review-card:active, .ws-item:active {
+    transform: scale(0.995);
+    transition: transform 0.08s ease;
+  }
+}
+
+/* =========================================================
+   ELITE MOBILE REFINEMENT PASS
+   Goal: evolve "luxury desktop adapted for mobile" into a
+   native-feeling premium mobile product. Strictly ≤768px;
+   desktop rendering remains identical.
+   Principles applied here:
+     1. Snappier motion tokens — 0.45s curves feel sluggish on touch
+     2. Softer shadow stack — phone screens amplify shadow intensity
+     3. Tighter typographic optical rhythm — less heading dominance
+     4. Calmer ambient decoration — fewer competing visual layers
+     5. Friendlier scroll-snap — proximity instead of mandatory
+     6. Thumb-zone respect — slightly wider CTA gaps
+   ========================================================= */
+@media (max-width: 768px) {
+  :root {
+    /* Faster, more app-like transition timing on touch */
+    --t-fast: 0.18s;
+    --t:      0.32s;
+    --t-slow: 0.55s;
+    /* Restrained shadow palette — premium, not theatrical */
+    --shadow-card:       0 12px 28px -16px rgba(0,0,0,0.42), 0 4px 10px -6px rgba(0,0,0,0.28);
+    --shadow-card-hover: 0 16px 36px -18px rgba(0,0,0,0.50), 0 6px 14px -8px rgba(0,0,0,0.32);
+    --shadow-soft:       0 8px 18px -12px rgba(0,0,0,0.35);
+  }
+
+  /* — Typographic optical refinement —
+     Pull max heading sizes down ~8–10% so the rhythm reads
+     considered and confident rather than loud. */
+  .h-display { font-size: clamp(2.1rem, 9vw, 2.7rem); letter-spacing: -0.022em; line-height: 1.04; }
+  .h-section { font-size: clamp(1.7rem, 7vw, 2.15rem); letter-spacing: -0.018em; line-height: 1.08; }
+  .h-sub     { font-size: 1.12rem; line-height: 1.32; }
+  .lead      { font-size: 0.94rem; line-height: 1.62; max-width: 40ch; }
+  .eyebrow   { font-size: 0.64rem; letter-spacing: 0.24em; }
+
+  /* — Hero hierarchy refinement — */
+  .hero-ctas { gap: 0.7rem; }
+  .hero-ctas .btn { padding-block: 1.05rem; font-size: 0.78rem; letter-spacing: 0.14em; }
+  .hero-trust { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+  /* — Calmer ambient decoration —
+     Phone screens amplify decoration intensity. Strip the
+     scroll-track edge fade and any leftover hero animation. */
+  .marques::after { display: none !important; }
+  .hero-bg::before, .hero-bg::after { animation: none !important; }
+  body::after { display: none !important; }       /* film grain off */
+
+  /* — Touch ergonomics — */
+  .contact-cta-buttons { gap: 0.65rem; }
+  .reviews-toggle { padding: 0.85rem 1.4rem; }
+
+  /* — Smoother momentum scrolling —
+     "proximity" snap holds the card at rest if the user is
+     reading, but releases easily on a flick — closer to how
+     native iOS picker carousels behave. */
+  .reviews-grid,
+  .review-grid { scroll-snap-type: x proximity; }
+
+  /* — will-change cleanup —
+     Drop persistent compositor hints from elements that don't
+     animate after first paint. Reduces GPU memory pressure. */
+  .hero-bg, .nav, .mobile-bar, .whatsapp-float { will-change: auto; }
+
+  /* — Section transition restraint —
+     Lighten the borders at light/dark section boundaries so
+     the page feels like one continuous surface, not stacked
+     panels. */
+  section.light { border-top-color: rgba(26,24,22,0.07); border-bottom-color: rgba(26,24,22,0.07); }
+}
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header role="banner">
+
+<!-- ========== TOP CONTACT BAR ========== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-item open-hours">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Mon–Fri 08:00–17:00 · Sat 08:00–14:00
+      </span>
+      <span class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        17–25 Portsdown Mews, London NW11 7ES
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="mailto:carcentre@outlook.com" class="topbar-item email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+        carcentre@outlook.com
+      </a>
+      <a href="https://wa.me/447720296813" target="_blank" rel="noopener" class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        +44 7720 296813
+      </a>
+      <a href="tel:+447720296813" class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +44 7720 296813
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Car Centre — London">
+      <span class="brand-emblem" aria-hidden="true">
+        <svg viewBox="0 0 260 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="chromeNav" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffffff"/>
+              <stop offset="0.38" stop-color="#d6d6d6"/>
+              <stop offset="0.6" stop-color="#888888"/>
+              <stop offset="0.82" stop-color="#efefef"/>
+              <stop offset="1" stop-color="#696969"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#chromeNav)" d="M12 68 C40 64 70 58 98 48 C120 30 150 22 184 24 C212 26 236 36 250 56 L250 62 C200 58 120 58 60 64 C40 66 24 68 14 70 C11 70 10 69 12 68 Z"/>
+          <path fill="none" stroke="rgba(10,10,12,0.5)" stroke-width="3" stroke-linecap="round" d="M112 45 C134 31 160 27 186 30 C200 32 210 38 216 48"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>Car Centre BS LTD</strong>
+        <small>London</small>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#promise">Same-Day MOT</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="tel:+447720296813" class="nav-cta">Call Us</a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ========== MOBILE MENU ========== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button type="button" class="close" id="menuClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M6 18L18 6"/></svg>
+  </button>
+  <a href="#services">Services</a>
+  <a href="#promise">Same-Day MOT</a>
+  <a href="#why">Why Us</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-primary">Book MOT</a>
+</div>
+
+</header>
+
+<main id="main" role="main">
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-vignette"></div>
+
+  <div class="hero-content">
+    <div class="hero-inner">
+      <span class="eyebrow">London · NW11 · Est. Independent Garage</span>
+      <h1>Same-Day MOT &amp; <span class="italic-accent">Premium</span> Vehicle Care in London.</h1>
+      <p class="lead">Fast, professional servicing and diagnostics — without the long wait. Drop your vehicle in the morning, drive it home in the afternoon, finished to the standard luxury owners trust.</p>
+
+      <div class="hero-trust">
+        <span class="stars">★★★★★</span>
+        <span class="sep"></span>
+        <small>4.8 Google · 170+ Reviews</small>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">
+          Book MOT
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+447720296813" class="btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/447720296813" target="_blank" rel="noopener" class="btn btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+
+      <div class="hero-signals">
+        <span>Same-day appointments available</span>
+        <span>Dealer-level diagnostics</span>
+        <span>OEM-quality parts</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <span><span class="dot"></span>EST. WORKSHOP · LONDON</span>
+    <span>17–25 PORTSDOWN MEWS · NW11</span>
+  </div>
+</section>
+
+<!-- ========== TRUST STRIP ========== -->
+<div class="trust-strip light">
+  <div class="trust-strip-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L3 6v6c0 5.5 4 9.7 9 10 5-.3 9-4.5 9-10V6l-9-4z"/><path d="M9 12l2 2 4-4"/></svg>
+      DVSA Approved <strong>MOT Centre</strong>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <strong>Same-Day</strong> Turnaround
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+      <strong>4.8★</strong> Google · 170+ Reviews
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 11-1 1L4 17v3h3l9.7-9.7"/></svg>
+      Master-Grade <strong>Technicians</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SAME-DAY MOT PROMISE ========== -->
+<section class="promise reveal light" id="promise">
+  <div class="promise-grid">
+    <div class="promise-image">
+      <img src="workshop.jpg" alt="Car Centre BS workshop — luxury vehicle in for service" loading="eager" fetchpriority="high" decoding="async" />
+      <div class="corner">
+        <small>The Workshop</small>
+        Inspected · Tested · Delivered
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Our Promise</span>
+      <h2 class="h-section" style="margin: 1rem 0 1.2rem;">Most MOTs and mechanical services <span class="italic-accent">completed the same day</span>.</h2>
+      <p class="lead">We complete MOTs and most mechanical work quickly and efficiently — so our customers don't waste time waiting on appointments. Booked in the morning, ready in the afternoon, finished to a standard luxury owners trust.</p>
+
+      <div class="promise-points">
+        <div class="promise-point">
+          <span class="num">01</span>
+          <div>
+            <h4>Same-Day MOT</h4>
+            <p>Class IV MOT testing completed in hours — not days.</p>
+          </div>
+        </div>
+        <div class="promise-point">
+          <span class="num">02</span>
+          <div>
+            <h4>Fast, Considered Turnaround</h4>
+            <p>Quick service without compromising the meticulous standards luxury vehicles deserve.</p>
+          </div>
+        </div>
+        <div class="promise-point">
+          <span class="num">03</span>
+          <div>
+            <h4>Honest, Transparent Pricing</h4>
+            <p>Clear quotes before any work begins. No surprises, no upsells — just straight answers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services reveal light" id="services">
+  <div class="section-head">
+    <div class="title-block">
+      <span class="eyebrow">The Workshop</span>
+      <h2 class="h-section" style="margin-top: 1rem;">A complete range of <span class="italic-accent">mechanical services</span>.</h2>
+    </div>
+    <p class="lead">From a fast same-day MOT to deep engine diagnostics and full luxury vehicle servicing — our workshop is equipped to care for every system your car relies on. We cover all mechanical work (excluding bodywork repairs).</p>
+  </div>
+
+  <div class="services-grid">
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.66 0 3.22.45 4.56 1.24"/></svg>
+      </div>
+      <span class="service-num">01</span>
+      <h3>Same-Day MOT</h3>
+      <p>Class IV MOT testing by certified DVSA testers — usually completed the same day you book.</p>
+      <a href="#contact" class="service-arrow">Book MOT
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h4l1-3h8l1 3h4M5 7v12a1 1 0 001 1h12a1 1 0 001-1V7M9 11h6"/></svg>
+      </div>
+      <span class="service-num">02</span>
+      <h3>Engine Diagnostics</h3>
+      <p>OEM-grade scan tools to pinpoint faults accurately — modules, sensors, CAN-bus, EV systems.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <span class="service-num">03</span>
+      <h3>Full Vehicle Servicing</h3>
+      <p>Interim, full and major services — completed to manufacturer specification or beyond.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <span class="service-num">04</span>
+      <h3>Brakes &amp; Suspension</h3>
+      <p>Pads, discs, calipers, struts and bushes — restored to factory standards and feel.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+      </div>
+      <span class="service-num">05</span>
+      <h3>Clutch &amp; Gearbox</h3>
+      <p>Manual and automatic transmission diagnostics, clutch kits, dual-mass flywheels.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <span class="service-num">06</span>
+      <h3>Electrical &amp; Batteries</h3>
+      <p>Wiring, AGM/EFB batteries supplied and coded, alternators and starter motors.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+      </div>
+      <span class="service-num">07</span>
+      <h3>Tyres &amp; Tracking</h3>
+      <p>Premium tyre fitment, balancing and four-wheel tracking for performance vehicles.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 21V10l6-7 6 7v11H6z"/><path d="M10 21v-6h4v6"/></svg>
+      </div>
+      <span class="service-num">08</span>
+      <h3>Luxury Vehicle Care</h3>
+      <p>Discreet, exceptional servicing for Rolls-Royce, Bentley, McLaren and other prestige marques.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+
+    <article class="service">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <span class="service-num">09</span>
+      <h3>Health Checks &amp; Pre-Purchase</h3>
+      <p>Comprehensive pre-purchase inspections and seasonal health checks with written reports.</p>
+      <a href="#contact" class="service-arrow">Enquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </article>
+  </div>
+
+</section>
+
+<!-- ========== STATS ========== -->
+<section class="stats reveal light">
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-num"><span class="counter" data-target="30" data-suffix="+">0</span></div>
+      <div class="stat-rule"></div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span class="counter" data-target="5000" data-suffix="+">0</span></div>
+      <div class="stat-rule"></div>
+      <div class="stat-label">Cars Serviced</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span class="counter" data-target="98">0</span><span class="unit">%</span></div>
+      <div class="stat-rule"></div>
+      <div class="stat-label">MOT Pass Rate</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span class="counter" data-target="170" data-suffix="+">0</span></div>
+      <div class="stat-rule"></div>
+      <div class="stat-label">Verified Reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INSIDE OUR WORKSHOP ========== -->
+<section class="workshop reveal" id="workshop">
+  <div class="section-head">
+    <div class="title-block">
+      <span class="eyebrow">Inside Our Workshop</span>
+      <h2 class="h-section" style="margin-top: 1rem;">A real working garage <span class="italic-accent">in NW11</span>.</h2>
+    </div>
+    <p class="lead">No stock photos — this is our actual workshop on Portsdown Mews. DVSA-approved MOT bays, prestige and everyday vehicles in for work, and a fully-equipped tyre and servicing operation.</p>
+  </div>
+
+  <div class="workshop-masonry">
+    <figure class="ws-item">
+      <img src="shop-mot-bay.jpg" alt="Technician at the DVSA-approved MOT test bay" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>MOT Centre</span><strong>DVSA-Approved MOT Test Bay</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-ferrari-ramp.jpg" alt="Red Ferrari on the ramp for specialist service" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Prestige</span><strong>Ferrari — Specialist Service</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-tyre-fitting.jpg" alt="Precision tyre fitting on a performance alloy wheel" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Tyres</span><strong>Precision Tyre Fitting &amp; Balancing</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-bmw-m3.jpg" alt="BMW M3 in the workshop bay" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Performance</span><strong>BMW M3 — MOT &amp; Inspection</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-porsche-911.jpg" alt="Porsche 911 in for diagnostics and service" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Diagnostics</span><strong>Porsche 911 — Diagnostics &amp; Service</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-m2-blue.jpg" alt="Blue BMW M2 Competition in for servicing" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Servicing</span><strong>BMW M2 Competition — In for Service</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-m2-underside.jpg" alt="Technician carrying out underbody and suspension work" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Repairs</span><strong>Suspension &amp; Underbody Work</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-ferrari-barchetta.jpg" alt="Red Ferrari 550 Barchetta in for MOT inspection" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Prestige</span><strong>Ferrari 550 Barchetta — MOT</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-front.jpg" alt="Car Centre BS workshop frontage on Portsdown Mews, NW11" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Find Us</span><strong>Our Workshop — Portsdown Mews</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-oldtimer-front.jpg" alt="Classic car in for specialist heritage service" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Classics</span><strong>Heritage Vehicle — Specialist Care</strong></figcaption>
+    </figure>
+    <figure class="ws-item">
+      <img src="shop-oldtimer-back.jpg" alt="Classic car prepared for MOT and detailed inspection" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Classics</span><strong>Vintage MOT &amp; Inspection</strong></figcaption>
+    </figure>
+  </div>
+
+  <p class="workshop-note">Everyday cars and prestige vehicles, looked after to the same standard — <a href="#contact">book your visit</a>.</p>
+</section>
+
+<!-- ========== LUXURY MARQUES ========== -->
+<section class="marques reveal">
+  <div class="marques-head">
+    <span class="eyebrow">Trusted Specialists</span>
+    <h2 class="h-section">Specialists in <span class="italic-accent">luxury &amp; performance</span> vehicles.</h2>
+    <p class="lead">From thoroughbred British marques to Italian exotics and German performance machines — our team has the experience, tooling and patience to care for the world's most demanding vehicles.</p>
+  </div>
+
+  <div class="marques-grid">
+    <div class="marque" aria-label="Rolls-Royce">
+      <img class="logo" src="logo-rollsroyce.png" alt="Rolls-Royce" loading="lazy" decoding="async" />
+      <small>Rolls-Royce</small>
+    </div>
+
+    <div class="marque" aria-label="Bentley">
+      <img class="logo" src="logo-bentley.png" alt="Bentley" loading="lazy" decoding="async" />
+      <small>Bentley</small>
+    </div>
+
+    <div class="marque" aria-label="McLaren">
+      <img class="logo" src="logo-mclaren.png" alt="McLaren" loading="lazy" decoding="async" />
+      <small>McLaren</small>
+    </div>
+
+    <div class="marque" aria-label="Ferrari">
+      <img class="logo" src="logo-ferrari.png" alt="Ferrari" loading="lazy" decoding="async" />
+      <small>Ferrari</small>
+    </div>
+
+    <div class="marque" aria-label="Lamborghini">
+      <img class="logo" src="logo-lamborghini.png" alt="Lamborghini" loading="lazy" decoding="async" />
+      <small>Lamborghini</small>
+    </div>
+
+    <div class="marque" aria-label="Porsche">
+      <img class="logo" src="logo-porsche.png" alt="Porsche" loading="lazy" decoding="async" />
+      <small>Porsche</small>
+    </div>
+
+    <div class="marque" aria-label="Mercedes-Benz">
+      <img class="logo" src="logo-mercedes.png" alt="Mercedes-Benz" loading="lazy" decoding="async" />
+      <small>Mercedes-Benz</small>
+    </div>
+
+    <div class="marque" aria-label="BMW">
+      <img class="logo" src="logo-bmw.png" alt="BMW" loading="lazy" decoding="async" />
+      <small>BMW</small>
+    </div>
+
+    <div class="marque" aria-label="Audi">
+      <img class="logo" src="logo-audi.png" alt="Audi" loading="lazy" decoding="async" />
+      <small>Audi</small>
+    </div>
+
+    <div class="marque" aria-label="Range Rover">
+      <img class="logo" src="logo-rangerover.png" alt="Range Rover" loading="lazy" decoding="async" />
+      <small>Range Rover</small>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CINEMATIC PLATE ========== -->
+<section class="cinematic reveal" aria-label="Luxury vehicle care">
+  <div class="cinematic-bg"></div>
+  <div class="cinematic-content">
+    <span class="eyebrow">A Higher Standard</span>
+    <h2 class="h-section">Trusted with London's <span class="italic-accent">most exceptional cars</span>.</h2>
+    <p>From a routine MOT on a daily Range Rover to a full service on a Rolls-Royce Ghost — the same standard of discretion, attention and craftsmanship is given to every vehicle that arrives at our workshop.</p>
+    <a href="#contact" class="btn btn-primary">
+      Book Your Vehicle In
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <div class="cinematic-meta">
+      <span class="dot"></span>
+      <span>Confidential · Master-Grade · Same-Day</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY US ========== -->
+<section class="why reveal light" id="why">
+  <div class="section-head">
+    <div class="title-block">
+      <span class="eyebrow">Why Car Centre BS</span>
+      <h2 class="h-section" style="margin-top: 1rem;">Built on <span class="italic-accent">trust, craftsmanship</span> and a fast turnaround.</h2>
+    </div>
+    <p class="lead">We earned our 4.8★ rating across 170+ Google reviews the only way it can be earned — by treating every car, and every owner, with the same care, transparency and attention to detail.</p>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      </div>
+      <h3>Speed Without Compromise</h3>
+      <p>Same-day MOTs and most mechanical work completed within hours — without cutting any corners.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+      </div>
+      <h3>Master-Grade Workmanship</h3>
+      <p>Decades of combined experience on prestige and performance vehicles, finished to factory standard.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-5 9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
+      </div>
+      <h3>Honest, Transparent Pricing</h3>
+      <p>Quotes confirmed before any work begins. No surprises on the invoice — only clarity, and a fair price.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h3>Trusted London Garage</h3>
+      <p>Independent, local and accountable. Based in NW11, serving the whole of London since day one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="reviews reveal light" id="reviews">
+  <div class="reviews-head">
+    <span class="eyebrow">From Our Customers</span>
+    <h2 class="h-section">What London is <span class="italic-accent">saying about us</span>.</h2>
+    <div class="reviews-meta">
+      <span class="review-pill"><strong>4.8</strong> <span class="stars">★★★★★</span> Google</span>
+      <span class="review-pill"><strong>170+</strong> Verified Reviews</span>
+      <span class="review-pill">NW11 · London</span>
+    </div>
+  </div>
+
+  <div class="review-grid" id="reviewGrid"></div>
+
+  <div class="reviews-cta">
+    <button type="button" id="reviewsToggle" class="reviews-toggle" aria-expanded="false" aria-controls="reviewGrid">View all reviews</button>
+    <a class="google-badge" href="https://www.google.com/maps/search/Car+Centre+BS+LTD+London+NW11+7ES/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      Read All Reviews on Google
+    </a>
+  </div>
+</section>
+
+<!-- ========== VISITING THE GARAGE ========== -->
+<section class="why reveal light" id="visiting">
+  <div class="section-head">
+    <div class="title-block">
+      <span class="eyebrow">Visiting Us</span>
+      <h2 class="h-section" style="margin-top: 1rem;">Everything you need to know <span class="italic-accent">before you arrive</span>.</h2>
+    </div>
+    <p class="lead">We're an established independent garage on Portsdown Mews in NW11 — straightforward to find and easy to deal with. Here's how a visit works.</p>
+  </div>
+
+  <div class="why-grid visit-grid">
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      </div>
+      <h3>Opening Hours</h3>
+      <div class="why-hours">
+        <span class="d">Mon – Fri</span><span class="t">08:00 — 17:00</span>
+        <span class="d">Saturday</span><span class="t">08:00 — 14:00</span>
+        <span class="d">Sunday</span><span class="t">Closed</span>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h3>Finding &amp; Parking</h3>
+      <p>17–25 Portsdown Mews, London NW11 7ES. On-site space to drop your vehicle, with an MOT viewing area available.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      </div>
+      <h3>Payment Methods</h3>
+      <p>All major debit and credit cards, contactless and bank transfer accepted. Clear quotes confirmed before any work begins.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V8a2 2 0 012-2h12a2 2 0 012 2v11"/><path d="M4 19h16M9 6V4h6v2"/></svg>
+      </div>
+      <h3>Reception &amp; Waiting Area</h3>
+      <p>A comfortable reception and waiting area on-site — or leave the vehicle with us and we'll call you the moment it's ready.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      </div>
+      <h3>Simple Booking</h3>
+      <p>Book by phone, WhatsApp, or the form below. Most MOTs can be booked for the same day — often within a couple of hours' notice.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h3>Fast Turnaround</h3>
+      <p>Most MOTs and routine work are completed the same day. Honest timelines given upfront — and kept.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BOOKING / CONTACT ========== -->
+<section class="booking reveal light" id="contact">
+  <div class="section-head">
+    <div class="title-block">
+      <span class="eyebrow">Direct Contact</span>
+      <h2 class="h-section" style="margin-top: 1rem;">Skip the forms — <span class="italic-accent">talk to us</span>.</h2>
+    </div>
+    <p class="lead">Most enquiries answered within minutes during workshop hours. WhatsApp, phone, or drop in — whichever is fastest for you.</p>
+  </div>
+
+  <div class="booking-grid">
+    <aside class="contact-block">
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </div>
+        <div class="contact-info">
+          <small>WhatsApp — Main Contact</small>
+          <a href="https://wa.me/447720296813" target="_blank" rel="noopener">+44 7720 296813</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="contact-info">
+          <small>Call Us — Main Number</small>
+          <a href="tel:+447720296813">+44 7720 296813</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contact-info">
+          <small>Workshop</small>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Car+Centre+BS+LTD+17-25+Portsdown+Mews+London+NW11+7ES" target="_blank" rel="noopener" class="lines">
+            17–25 Portsdown Mews<br/>London NW11 7ES, UK
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="contact-info" style="width:100%;">
+          <small>Opening Hours</small>
+          <div class="hours" style="margin-top: 0.4rem;">
+            <span class="day">Monday – Friday</span><span class="time">08:00 — 17:00</span>
+            <span class="day">Saturday</span><span class="time">08:00 — 14:00</span>
+            <span class="day">Sunday</span><span class="time">Closed</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="contact-card">
+      <span class="eyebrow">Direct Contact</span>
+      <h3>Need MOT, Diagnostics or Servicing?</h3>
+      <p class="lead-sub">Contact us directly for fast assistance and same-day availability — no forms, no waiting.</p>
+
+      <div class="contact-rating">
+        <span class="stars">★★★★★</span>
+        <strong>4.8</strong> Google · 170+ reviews
+      </div>
+
+      <div class="contact-cta-buttons">
+        <a href="https://wa.me/447720296813" target="_blank" rel="noopener" class="btn btn-wa-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="tel:+447720296813" class="btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+
+      <span class="contact-replies">Usually replies within minutes</span>
+
+      <div class="contact-divider"></div>
+
+      <p class="contact-trust">Trusted by prestige vehicle owners across London.</p>
+    </div>
+  </div>
+
+  <div class="map-wrap">
+    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      title="Car Centre BS LTD — 17-25 Portsdown Mews, London NW11 7ES"
+      src="https://www.google.com/maps?q=Car+Centre+BS+LTD,+17-25+Portsdown+Mews,+London+NW11+7ES&output=embed"></iframe>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand" aria-label="Car Centre — London">
+        <span class="brand-emblem" aria-hidden="true">
+          <svg viewBox="0 0 260 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="chromeFoot" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset="0.38" stop-color="#d6d6d6"/>
+                <stop offset="0.6" stop-color="#888888"/>
+                <stop offset="0.82" stop-color="#efefef"/>
+                <stop offset="1" stop-color="#696969"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#chromeFoot)" d="M12 68 C40 64 70 58 98 48 C120 30 150 22 184 24 C212 26 236 36 250 56 L250 62 C200 58 120 58 60 64 C40 66 24 68 14 70 C11 70 10 69 12 68 Z"/>
+            <path fill="none" stroke="rgba(6,6,6,0.55)" stroke-width="3" stroke-linecap="round" d="M112 45 C134 31 160 27 186 30 C200 32 210 38 216 48"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Car Centre BS LTD</strong>
+          <small>London</small>
+        </span>
+      </a>
+      <p>London's premium independent garage for same-day MOTs, expert diagnostics and luxury vehicle servicing. Trusted by 170+ verified customers across the capital.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Workshop</h4>
+      <ul>
+        <li><a href="#services">All Services</a></li>
+        <li><a href="#promise">Same-Day MOT</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li>17–25 Portsdown Mews</li>
+        <li>London NW11 7ES</li>
+        <li>United Kingdom</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Car+Centre+BS+LTD+17-25+Portsdown+Mews+London+NW11+7ES" target="_blank" rel="noopener">Open in Maps →</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/447720296813">WhatsApp · +44 7720 296813</a></li>
+        <li><a href="tel:+447720296813">Call · +44 7720 296813</a></li>
+        <li><a href="tel:+442084581500">Secondary · +44 20 8458 1500</a></li>
+        <li>Mon–Fri · 08:00–17:00</li>
+        <li>Sat · 08:00–14:00</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year">2026</span> Car Centre BS LTD · All Rights Reserved</span>
+    <span><span class="stars">4.8 ★</span> Google · 170+ Reviews · NW11</span>
+  </div>
+</footer>
+
+<!-- ========== FLOATING WHATSAPP ========== -->
+<a class="whatsapp-float" href="https://wa.me/447720296813" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<!-- ========== MOBILE STICKY CTA ========== -->
+<div class="mobile-bar">
+  <a class="call" href="tel:+447720296813">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call
+  </a>
+  <a class="whatsapp" href="https://wa.me/447720296813" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+    WhatsApp
+  </a>
+  <a class="directions" href="https://www.google.com/maps/search/?api=1&amp;query=Car+Centre+BS+LTD+17-25+Portsdown+Mews+London+NW11+7ES" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Directions
+  </a>
+</div>
+
+<script>
+const nav = document.getElementById('nav');
+const onScroll = () => {
+  if (window.scrollY > 24) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ==== Mobile menu — robust binding for iOS Safari ====
+try {
+  const menuToggle = document.getElementById('menuToggle');
+  const menuClose = document.getElementById('menuClose');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  const openMenu = (e) => {
+    if (e && e.cancelable) e.preventDefault();
+    console.log('[menu] open');
+    if (mobileMenu) mobileMenu.classList.add('open');
+    document.body.classList.add('menu-open');
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+  };
+  const closeMenu = (e) => {
+    if (e && e.cancelable) e.preventDefault();
+    console.log('[menu] close');
+    if (mobileMenu) mobileMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', openMenu);
+    menuToggle.addEventListener('touchend', openMenu, { passive: false });
+  }
+  if (menuClose) {
+    menuClose.addEventListener('click', closeMenu);
+    menuClose.addEventListener('touchend', closeMenu, { passive: false });
+  }
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  // Document-level delegation — Safari fallback
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest && e.target.closest('#menuToggle');
+    const c = e.target.closest && e.target.closest('#menuClose');
+    if (t) { console.log('[menu] delegated open'); openMenu(e); }
+    else if (c) { console.log('[menu] delegated close'); closeMenu(e); }
+  }, { capture: true });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) closeMenu(e);
+  });
+} catch (err) { console.error('[menu] init failed', err); }
+
+// Reviews "View all" progressive disclosure
+const toggle = document.getElementById('reviewsToggle');
+const reviewGrid = document.getElementById('reviewGrid');
+if (toggle && reviewGrid) {
+  toggle.addEventListener('click', () => {
+    const expanded = reviewGrid.classList.toggle('expanded');
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.textContent = expanded ? 'Show fewer reviews' : 'View all reviews';
+  });
+}
+
+// Booking form was replaced with a direct-contact card; guard for re-introduction
+const form = document.querySelector('form.booking-form');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const status = form.querySelector('.form-status');
+    if (status) {
+      status.className = 'form-status is-success';
+      status.textContent = 'Thank you — we will be in touch shortly.';
+    }
+  });
+}
+
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ==========================================================
+   REVEAL OBSERVER — adds .in to .reveal sections early
+   threshold 0.08 + negative rootMargin = animation begins
+   BEFORE the section is fully in view, so the user never
+   sees the opacity:0 starting state. Falls through cleanly
+   on browsers without IntersectionObserver — every section
+   gets .in immediately, identical to the safety-net animation.
+   ========================================================== */
+(function initRevealObserver() {
+  const targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach((el) => el.classList.add('in'));
+    return;
+  }
+
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        reveal.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -10% 0px' });
+  targets.forEach((el) => reveal.observe(el));
+})();
+
+/* ==========================================================
+   STAT COUNTERS — Safari-hardened
+   - Observes the .stats SECTION, not individual <span> spans
+     (iOS Safari can fail to fire on tiny inline targets with
+     non-zero threshold + negative rootMargin).
+   - Lower threshold (0.05) + earlier rootMargin so the trigger
+     fires the moment the section starts entering view.
+   - Three independent kick-starts: IntersectionObserver,
+     getBoundingClientRect synchronous check at script-init for
+     already-visible cases, and a 4s setTimeout safety net.
+   - Idempotent — the `started` flag means whichever fires first
+     wins; the others become no-ops.
+   - Honours prefers-reduced-motion by snapping straight to the
+     target value with no animation.
+   ========================================================== */
+(function initStatCounters() {
+  const counters = document.querySelectorAll('.counter[data-target]');
+  if (!counters.length) return;
+
+  const reduced = window.matchMedia &&
+                  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fmt = (n) => n.toLocaleString('en-GB');
+  let started = false;
+
+  const animate = (el) => {
+    if (el.dataset.done === '1') return;
+    el.dataset.done = '1';
+    const target = parseInt(el.dataset.target, 10);
+    if (!Number.isFinite(target)) return;
+    const suffix = el.dataset.suffix || '';
+
+    if (reduced) {
+      el.textContent = fmt(target) + suffix;
+      return;
+    }
+
+    const duration = 1800;
+    const start = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const tick = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const v = Math.round(target * ease(p));
+      el.textContent = fmt(v) + (p === 1 ? suffix : '');
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const startAll = () => {
+    if (started) return;
+    started = true;
+    counters.forEach(animate);
+  };
+
+  /* Observe the section, not the counters — far more reliable on iOS */
+  const statsSection = document.querySelector('.stats') || counters[0].closest('section');
+  const observeTarget = statsSection || counters[0];
+
+  /* Fallback #1: no IntersectionObserver -> animate now */
+  if (!('IntersectionObserver' in window)) {
+    startAll();
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startAll();
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
+  observer.observe(observeTarget);
+
+  /* Fallback #2: deep-link or initial-visibility case.
+     If the section is already on screen when the script runs,
+     IntersectionObserver may need a tick to fire its first
+     entry — kick off after a short rAF so it isn't beaten. */
+  if (statsSection) {
+    requestAnimationFrame(() => {
+      const r = statsSection.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) startAll();
+    });
+  }
+
+  /* Fallback #3: absolute safety net.
+     If neither fired after 4s for any reason (iOS quirk, throttled
+     background tab waking up, etc.) just animate. Idempotent. */
+  setTimeout(startAll, 4000);
+})();
+</script>
+
+</body>
+</html>
