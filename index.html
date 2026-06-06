@@ -705,7 +705,10 @@ section.light + section.light { border-top: none; }
    ========================================================= */
 .hero {
   position: relative;
+  /* vh fallback for old Safari; svh excludes the iOS dynamic
+     URL bar so the hero never jumps when the toolbar appears. */
   min-height: clamp(680px, 94vh, 960px);
+  min-height: clamp(680px, 94svh, 960px);
   padding: clamp(5rem, 10vw, 8rem) var(--pad) clamp(4rem, 8vw, 7rem);
   display: flex;
   align-items: center;
@@ -1373,6 +1376,17 @@ section.light + section.light { border-top: none; }
   line-height: 1;
 }
 .stat-num .unit { color: var(--gold); font-size: 0.6em; vertical-align: top; margin-left: 0.1em; }
+/* Text-mode stat — for non-numeric headlines like "Same-Day Service".
+   Italic display face at a slightly smaller size keeps it tonally
+   distinct from the numbers while preserving the same vertical
+   footprint, so the grid rhythm reads even. */
+.stat-num--text {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-style: italic;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
 .stat-rule {
   width: 28px; height: 1px;
   background: var(--gold);
@@ -2092,7 +2106,7 @@ footer {
 /* =========================================================
    REVEAL ON SCROLL
    ========================================================= */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); animation: revealSafetyNet 0.01s 1.6s forwards; }
+.reveal { opacity: 0; transform: translateY(8px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); animation: revealSafetyNet 0.01s 1.6s forwards; }
 .reveal.in { opacity: 1; transform: translateY(0); animation: none; }
 @keyframes revealSafetyNet { to { opacity: 1; transform: translateY(0); } }
 
@@ -2168,6 +2182,7 @@ body::after {
 .cinematic {
   position: relative;
   min-height: clamp(380px, 50vh, 520px);
+  min-height: clamp(380px, 50svh, 520px);
   padding: clamp(4rem, 7vw, 6rem) var(--pad);
   display: flex;
   align-items: center;
@@ -2779,7 +2794,8 @@ body::after {
   /* — Hero hierarchy refinement — */
   .hero-ctas { gap: 0.7rem; }
   .hero-ctas .btn { padding-block: 1.05rem; font-size: 0.78rem; letter-spacing: 0.14em; }
-  .hero-trust { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  /* hero-trust backdrop blur removed on mobile — keeps GPU compositing
+     consistent with the .nav and .mobile-menu mobile rules above. */
 
   /* — Calmer ambient decoration —
      Phone screens amplify decoration intensity. Strip the
@@ -2859,7 +2875,80 @@ section[id] { scroll-margin-top: 92px; }
     max-width: 100%;
   }
   /* Hero background can never push past viewport */
-  .hero, .hero-bg { max-width: 100vw; max-width: 100%; }
+  .hero, .hero-bg { max-width: 100%; }
+}
+
+/* =========================================================
+   TYPOGRAPHIC PRECISION
+   Modern browser text-wrap intelligence — `balance` makes
+   two-line headings split evenly (no widow on line two);
+   `pretty` prevents lone-word widows at the end of paragraphs.
+   Apple uses both extensively on product pages — the result is
+   the "every line feels considered" sensation without manual
+   line-break hints. Falls through cleanly on older browsers
+   (the property is just ignored, no layout change).
+   ========================================================= */
+h1, h2, h3, h4,
+.h-display, .h-section, .h-sub,
+.hero h1, .promise-point h4, .service h3,
+.why-card h3, .review-name, .marques-head h2,
+.reviews-head h2, .cinematic h2 {
+  text-wrap: balance;
+}
+.lead, .review-text, .promise-point p, .service p,
+.why-card p, .contact-card .lead-sub, .workshop-note,
+.cinematic p {
+  text-wrap: pretty;
+}
+
+/* =========================================================
+   EDITORIAL REVIEWS POLISH
+   Lifts the testimonial cards from "functional" to "editorial":
+     - Decorative oversized quote glyph before each review
+     - Italic display-face quote body for emotional weight
+     - Tighter author-block typographic rhythm
+     - Restrained hairline accent between author + date
+   No structural changes — purely typographic + decorative.
+   ========================================================= */
+.review-card { position: relative; }
+.review-text {
+  font-style: italic;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+.review-text::before {
+  content: '\201C';                        /* curly opening quote */
+  position: absolute;
+  top: -2.1rem;
+  left: -0.55rem;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.4rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.34;
+  pointer-events: none;
+  user-select: none;
+}
+.light .review-text::before { color: var(--gold-deep); opacity: 0.28; }
+
+/* Author block — slightly more editorial proportions */
+.review-name { letter-spacing: 0.005em; }
+.review-date {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+/* Mobile — pull the decorative quote inward so it doesn't
+   clip against the scroll-snap card edge */
+@media (max-width: 768px) {
+  .review-text::before {
+    top: -1.6rem;
+    left: -0.2rem;
+    font-size: 3.6rem;
+  }
 }
 
 </style>
@@ -3201,9 +3290,9 @@ section[id] { scroll-margin-top: 92px; }
       <div class="stat-label">Cars Serviced</div>
     </div>
     <div class="stat">
-      <div class="stat-num"><span class="counter" data-target="98">0</span><span class="unit">%</span></div>
+      <div class="stat-num"><span>4.9</span><span class="unit">★</span></div>
       <div class="stat-rule"></div>
-      <div class="stat-label">MOT Pass Rate</div>
+      <div class="stat-label">Average Customer Rating</div>
     </div>
     <div class="stat">
       <div class="stat-num"><span class="counter" data-target="170" data-suffix="+">0</span></div>
@@ -3245,8 +3334,8 @@ section[id] { scroll-margin-top: 92px; }
       <figcaption class="ws-caption"><span>Diagnostics</span><strong>Porsche 911 — Diagnostics &amp; Service</strong></figcaption>
     </figure>
     <figure class="ws-item">
-      <img src="shop-m2-blue.jpg" alt="Blue BMW M2 Competition in for servicing" loading="lazy" decoding="async" />
-      <figcaption class="ws-caption"><span>Servicing</span><strong>BMW M2 Competition — In for Service</strong></figcaption>
+      <img src="shop-m2-blue.jpg" alt="BMW in for servicing" loading="lazy" decoding="async" />
+      <figcaption class="ws-caption"><span>Servicing</span><strong>BMW — In for Service</strong></figcaption>
     </figure>
     <figure class="ws-item">
       <img src="shop-m2-underside.jpg" alt="Technician carrying out underbody and suspension work" loading="lazy" decoding="async" />
@@ -3922,7 +4011,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   if (!('IntersectionObserver' in window)) { startAll(); return; }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) { startAll(); observer.disconnect(); }
     });
   }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
   observer.observe(observeTarget);
@@ -3938,3 +4026,4 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 </body>
 </html>
+tml>
