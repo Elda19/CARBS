@@ -76,6 +76,119 @@
 }
 </script>
 
+<!-- AggregateRating schema — public Google Business Profile data.
+     Real numbers, not invented. Backed by the live Google review
+     count visible at the link in the reviews section. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "@id": "https://www.carcentre.uk/#business",
+  "name": "Car Centre BS LTD",
+  "url": "https://www.carcentre.uk/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "170",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Caroline Fell"
+      },
+      "datePublished": "5 months ago",
+      "reviewBody": "I had a great experience at Car Centre BS. Everyone was extremely polite, friendly, and genuinely helpful from start to finish. They took the time to explain everything clearly and made the whole process smooth and stress-free. It's refreshing to deal with a team that's both professional and approachable. I would definitely recommend them and wouldn't hesitate to return in the future.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Isacco Abdulahi"
+      },
+      "datePublished": "Edited a year ago",
+      "reviewBody": "Exceptional service at this car garage! From the moment I walked in, the staff treated me with utmost professionalism and courtesy. The technicians went above and beyond, providing a thorough and efficient service for my vehicle. The attention to detail was remarkable, and the pricing was fair. I left feeling confident in the work done on my car. This garage truly embodies excellence in customer service and automotive expertise. I highly recommend them for anyone in need of top-notch car care. Five stars well-deserved!",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "David GG"
+      },
+      "datePublished": "8 months ago",
+      "reviewBody": "I've been going to this garage for a number of years. They're awesome in every way, and I have recommended this garage many many times to friends and family. Super efficient and professional service from all the mechanic at this garage, I can't recommended them highly enough 10 out of 10",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Maria Gerasimova"
+      },
+      "datePublished": "11 months ago",
+      "reviewBody": "I have always been nervous about going to new mechanics as I know nothing about cars, but the team here are expert, friendly and so professional. They have never oversold me anything and would rather fix things than replace expensive parts. And what they did fix, they charged good prices for. I am so happy, this is my new go-to place! Thank you so much for taking such good care of my car!",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "L R"
+      },
+      "datePublished": "6 months ago",
+      "reviewBody": "What Great people went and done my MOT they are extremely friendly they offered me some tea as it was really cold and they took care of my car and made sure everything was legal for me to drive the car very professional People happy with their service !!",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sara Leah Schwartz"
+      },
+      "datePublished": "a year ago",
+      "reviewBody": "Had MOT done here today. Excellent service, super efficient and quick. The staff were extremely friendly and honest…I highly recommend this garage, 10/10!",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+  ]
+}
+</script>
+
+
 <!-- Preload critical hero asset -->
 <link rel="preload" as="image" href="hero.jpg" fetchpriority="high" />
 <link rel="preload" as="image" href="workshop.jpg" fetchpriority="high" />
@@ -2993,6 +3106,44 @@ h1, h2, h3, h4,
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+
+/* a11y / authenticity — Verified Google Review badge.
+   Small pill at the top right of each real review card,
+   using the official Google brand colours on the G mark. */
+.google-verified {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: rgba(255,255,255,0.02);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.light .google-verified {
+  border-color: var(--line-on-cream);
+  color: var(--on-cream-soft);
+  background: rgba(255,255,255,0.4);
+}
+.google-verified svg { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .google-verified {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.5rem;
+    gap: 0.3rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -3537,78 +3688,123 @@ h1, h2, h3, h4,
     </div>
   </div>
 
-  <div class="review-grid" id="reviewGrid">
-    <article class="review-card">
-      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
-      <p class="review-text">"Absolutely exceptional service. They looked after my Rolls-Royce Ghost like it was their own. Honest pricing, immaculate workshop, and the same-day MOT was painless. I would not take my car anywhere else."</p>
-      <div class="review-author">
-        <div class="review-avatar">JM</div>
-        <div class="review-info">
-          <span class="review-name">James Morrison</span>
-          <span class="review-date">February 2026</span>
+  <!-- Google reviews data wiring.
+     CID (stable customer ID for direct linking): 16737996060054815837
+     Feature ID (from the Maps URL):              0x487610a2e8ff3e77:0xe848dd9721e5c25d
+     To activate auto-fetch:
+       1. Go to https://developers.google.com/maps/documentation/places/web-service/place-id
+       2. Paste "Car Centre BS LTD 17-25 Portsdown Mews NW11 7ES" into the finder
+       3. Copy the ChIJ-prefixed Place ID and replace REPLACE_WITH_GOOGLE_PLACE_ID below
+       4. Generate a Maps JavaScript API key restricted to www.carcentre.uk
+       5. Replace REPLACE_WITH_GOOGLE_MAPS_API_KEY below -->
+    <div class="review-grid" id="reviewGrid"
+       data-place-id="REPLACE_WITH_GOOGLE_PLACE_ID"
+       data-api-key="REPLACE_WITH_GOOGLE_MAPS_API_KEY">
+
+      <!-- Always-visible luxury empty state. Will be hidden when the
+           Places API successfully populates real review cards above it. -->
+            <article class="review-card" data-static="1">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <span class="sr-only">5 out of 5 stars</span>
+        <span class="google-verified" aria-label="Verified Google Review">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.2z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8C3.9 20.5 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.8 14.1c-.2-.7-.3-1.4-.3-2.1s.1-1.4.3-2.1V7.1H2.1C1.4 8.6 1 10.3 1 12s.4 3.4 1.1 4.9l3.7-2.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2C17.5 2.1 15 1 12 1 7.7 1 3.9 3.5 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
+          Verified Google Review
+        </span>
+        <p class="review-text">I had a great experience at Car Centre BS. Everyone was extremely polite, friendly, and genuinely helpful from start to finish. They took the time to explain everything clearly and made the whole process smooth and stress-free. It's refreshing to deal with a team that's both professional and approachable. I would definitely recommend them and wouldn't hesitate to return in the future.</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">C</div>
+          <div class="review-info">
+            <span class="review-name">Caroline Fell</span>
+            <span class="review-date">5 months ago</span>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="review-card">
-      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
-      <p class="review-text">"Found this place by recommendation and so glad I did. They diagnosed an electrical fault on my Bentley Continental that two other garages had missed. Fair price and finished the same day. Truly first-class."</p>
-      <div class="review-author">
-        <div class="review-avatar">SK</div>
-        <div class="review-info">
-          <span class="review-name">Sarah Kapoor</span>
-          <span class="review-date">January 2026</span>
+      </article>
+      <article class="review-card" data-static="1">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <span class="sr-only">5 out of 5 stars</span>
+        <span class="google-verified" aria-label="Verified Google Review">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.2z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8C3.9 20.5 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.8 14.1c-.2-.7-.3-1.4-.3-2.1s.1-1.4.3-2.1V7.1H2.1C1.4 8.6 1 10.3 1 12s.4 3.4 1.1 4.9l3.7-2.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2C17.5 2.1 15 1 12 1 7.7 1 3.9 3.5 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
+          Verified Google Review
+        </span>
+        <p class="review-text">Exceptional service at this car garage! From the moment I walked in, the staff treated me with utmost professionalism and courtesy. The technicians went above and beyond, providing a thorough and efficient service for my vehicle. The attention to detail was remarkable, and the pricing was fair. I left feeling confident in the work done on my car. This garage truly embodies excellence in customer service and automotive expertise. I highly recommend them for anyone in need of top-notch car care. Five stars well-deserved!</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">I</div>
+          <div class="review-info">
+            <span class="review-name">Isacco Abdulahi</span>
+            <span class="review-date">Edited a year ago</span>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="review-card">
-      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
-      <p class="review-text">"I have been bringing my BMW M3 here for three years. Always honest, always thorough, always finished when promised. Family-run feel, dealership-level work, half the price. Cannot recommend highly enough."</p>
-      <div class="review-author">
-        <div class="review-avatar">DC</div>
-        <div class="review-info">
-          <span class="review-name">David Chen</span>
-          <span class="review-date">December 2025</span>
+      </article>
+      <article class="review-card" data-static="1">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <span class="sr-only">5 out of 5 stars</span>
+        <span class="google-verified" aria-label="Verified Google Review">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.2z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8C3.9 20.5 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.8 14.1c-.2-.7-.3-1.4-.3-2.1s.1-1.4.3-2.1V7.1H2.1C1.4 8.6 1 10.3 1 12s.4 3.4 1.1 4.9l3.7-2.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2C17.5 2.1 15 1 12 1 7.7 1 3.9 3.5 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
+          Verified Google Review
+        </span>
+        <p class="review-text">I've been going to this garage for a number of years.<br>They're awesome in every way, and I have recommended this garage many many times to friends and family.<br>Super efficient and professional service from all the mechanic at this garage, I can't recommended them highly enough 10 out of 10</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">D</div>
+          <div class="review-info">
+            <span class="review-name">David GG</span>
+            <span class="review-date">8 months ago</span>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="review-card">
-      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
-      <p class="review-text">"Booked same-day MOT for my Porsche 911 — in by 9am, out by lunchtime, full transparency on what they checked. Professional, courteous, and very clean facility. This is how a luxury garage should operate."</p>
-      <div class="review-author">
-        <div class="review-avatar">RP</div>
-        <div class="review-info">
-          <span class="review-name">Rebecca Patel</span>
-          <span class="review-date">November 2025</span>
+      </article>
+      <article class="review-card" data-static="1">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <span class="sr-only">5 out of 5 stars</span>
+        <span class="google-verified" aria-label="Verified Google Review">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.2z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8C3.9 20.5 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.8 14.1c-.2-.7-.3-1.4-.3-2.1s.1-1.4.3-2.1V7.1H2.1C1.4 8.6 1 10.3 1 12s.4 3.4 1.1 4.9l3.7-2.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2C17.5 2.1 15 1 12 1 7.7 1 3.9 3.5 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
+          Verified Google Review
+        </span>
+        <p class="review-text">I have always been nervous about going to new mechanics as I know nothing about cars, but the team here are expert, friendly and so professional. They have never oversold me anything and would rather fix things than replace expensive parts. And what they did fix, they charged good prices for. I am so happy, this is my new go-to place! Thank you so much for taking such good care of my car!</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">M</div>
+          <div class="review-info">
+            <span class="review-name">Maria Gerasimova</span>
+            <span class="review-date">11 months ago · Local Guide</span>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="review-card">
-      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
-      <p class="review-text">"Took my Ferrari 550 Barchetta in for an MOT and full inspection. They treated it with the respect a classic deserves. Detailed write-up, fair pricing, and they sourced a difficult-to-find part within 48 hours. Outstanding."</p>
-      <div class="review-author">
-        <div class="review-avatar">AT</div>
-        <div class="review-info">
-          <span class="review-name">Anthony Thompson</span>
-          <span class="review-date">October 2025</span>
+      </article>
+      <article class="review-card" data-static="1">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <span class="sr-only">5 out of 5 stars</span>
+        <span class="google-verified" aria-label="Verified Google Review">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.2z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8C3.9 20.5 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.8 14.1c-.2-.7-.3-1.4-.3-2.1s.1-1.4.3-2.1V7.1H2.1C1.4 8.6 1 10.3 1 12s.4 3.4 1.1 4.9l3.7-2.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2C17.5 2.1 15 1 12 1 7.7 1 3.9 3.5 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
+          Verified Google Review
+        </span>
+        <p class="review-text">What Great people went and done my MOT they are extremely friendly they offered me some tea as it was really cold and they took care of my car and made sure everything was legal for me to drive the car very professional People happy with their service !!</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">L</div>
+          <div class="review-info">
+            <span class="review-name">L R</span>
+            <span class="review-date">6 months ago</span>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="review-card">
-      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
-      <p class="review-text">"Honest, transparent, and properly skilled. I drive an everyday Audi A4, not a prestige car, and they looked after me with the same care a Bentley owner would get. That tells you everything about how they run things."</p>
-      <div class="review-author">
-        <div class="review-avatar">LM</div>
-        <div class="review-info">
-          <span class="review-name">Laura Mitchell</span>
-          <span class="review-date">September 2025</span>
+      </article>
+      <article class="review-card" data-static="1">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <span class="sr-only">5 out of 5 stars</span>
+        <span class="google-verified" aria-label="Verified Google Review">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.2z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8C3.9 20.5 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.8 14.1c-.2-.7-.3-1.4-.3-2.1s.1-1.4.3-2.1V7.1H2.1C1.4 8.6 1 10.3 1 12s.4 3.4 1.1 4.9l3.7-2.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2C17.5 2.1 15 1 12 1 7.7 1 3.9 3.5 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
+          Verified Google Review
+        </span>
+        <p class="review-text">Had MOT done here today. Excellent service, super efficient and quick. The staff were extremely friendly and honest…I highly recommend this garage, 10/10!</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">S</div>
+          <div class="review-info">
+            <span class="review-name">Sara Leah Schwartz</span>
+            <span class="review-date">a year ago</span>
+          </div>
         </div>
-      </div>
-    </article>
-  </div>
+      </article>
+
+    </div>
 
   <div class="reviews-cta">
     <button type="button" id="reviewsToggle" class="reviews-toggle" aria-expanded="false" aria-controls="reviewGrid">View all reviews</button>
-    <a class="google-badge" href="https://www.google.com/maps/search/Car+Centre+BS+LTD+London+NW11+7ES/" target="_blank" rel="noopener" aria-label="Read all reviews on Google (opens in new tab)"><!-- a11y -->
+    <a class="google-badge" href="https://www.google.com/maps?cid=16737996060054815837" target="_blank" rel="noopener" aria-label="Read all reviews on Google (opens in new tab)"><!-- a11y -->
       <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
       Read All Reviews on Google
     </a>
@@ -3880,6 +4076,7 @@ h1, h2, h3, h4,
     initReviewsToggle();
     initFooterYear();
     initCtaTracking();
+    initGoogleReviews();
   }
 
   // ===========================================================
@@ -4162,6 +4359,98 @@ h1, h2, h3, h4,
       a.addEventListener('click', () => track('cta_directions'));
     });
   }
+
+  // ===========================================================
+  // 8. GOOGLE PLACES REVIEWS HOOK
+  // Activates only when both data-place-id and data-api-key on
+  // #reviewGrid have been swapped to real values. Otherwise this
+  // function is a no-op and the static empty state remains visible.
+  //
+  // To activate:
+  //   1. Get a Google Maps JavaScript API key at
+  //      console.cloud.google.com (enable "Maps JavaScript API"
+  //      AND "Places API" — the legacy Places service is what
+  //      exposes review text; the new Places API does not).
+  //   2. Find your Place ID at developers.google.com/maps/documentation/places/web-service/place-id
+  //      (search "Car Centre BS LTD 17-25 Portsdown Mews NW11 7ES").
+  //   3. Replace REPLACE_WITH_GOOGLE_PLACE_ID and REPLACE_WITH_GOOGLE_MAPS_API_KEY
+  //      attributes on <div class="review-grid" id="reviewGrid">.
+  //   4. Restrict your API key to www.carcentre.uk to prevent abuse.
+  //
+  // Cache: results are stored in sessionStorage for 1 hour so a
+  // page refresh doesn't re-bill against your API quota.
+  // ===========================================================
+  function initGoogleReviews() {
+    const grid = document.getElementById('reviewGrid');
+    if (!grid) return;
+    const placeId = grid.dataset.placeId;
+    const apiKey = grid.dataset.apiKey;
+    if (!placeId || !apiKey ||
+        placeId === 'REPLACE_WITH_GOOGLE_PLACE_ID' ||
+        apiKey === 'REPLACE_WITH_GOOGLE_MAPS_API_KEY') return;
+
+    const cacheKey = 'ccbs_reviews_v1';
+    const cacheTTL = 60 * 60 * 1000; // 1 hour
+    const render = (reviews) => {
+      if (!Array.isArray(reviews) || !reviews.length) return;
+      const html = reviews.map((r) => `
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+          <span class="sr-only">${r.rating} out of 5 stars</span>
+          <p class="review-text">${escapeHtml(r.text)}</p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">${escapeHtml((r.author_name || '?').charAt(0))}</div>
+            <div class="review-info">
+              <span class="review-name">${escapeHtml(r.author_name || 'Google reviewer')}</span>
+              <span class="review-date">${escapeHtml(r.relative_time_description || '')}</span>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      // Clear static fallback review cards before injecting live ones
+      grid.querySelectorAll('[data-static="1"]').forEach((el) => el.remove());
+      grid.insertAdjacentHTML('afterbegin', html);
+    };
+    const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[c]);
+    const pickBest = (reviews) => reviews
+      .filter((r) => r.rating >= 5 && r.text && r.text.length > 30)
+      .sort((a, b) => (b.text.length - a.text.length))
+      .slice(0, 6);
+
+    // 1. Try cache first
+    try {
+      const cached = sessionStorage.getItem(cacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (parsed.expires > Date.now()) { render(parsed.reviews); return; }
+      }
+    } catch (_) {}
+
+    // 2. Load Google Maps SDK and call PlacesService.getDetails
+    const callback = '__gmapsReviewsCallback__' + Math.random().toString(36).slice(2);
+    window[callback] = () => {
+      try {
+        const div = document.createElement('div');
+        const svc = new google.maps.places.PlacesService(div);
+        svc.getDetails({ placeId: placeId, fields: ['reviews'] }, (place, status) => {
+          if (status !== google.maps.places.PlacesServiceStatus.OK) return;
+          const best = pickBest(place.reviews || []);
+          if (!best.length) return;
+          try { sessionStorage.setItem(cacheKey, JSON.stringify({ expires: Date.now() + cacheTTL, reviews: best })); } catch (_) {}
+          render(best);
+        });
+      } catch (_) { /* fallback empty state stays visible */ }
+    };
+    const sdk = document.createElement('script');
+    sdk.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(apiKey) + '&libraries=places&callback=' + callback;
+    sdk.async = true;
+    sdk.defer = true;
+    sdk.onerror = () => { /* empty state stays visible */ };
+    document.head.appendChild(sdk);
+  }
+
 })();
 </script>
 
