@@ -105,7 +105,7 @@
   /* Text (on dark) */
   --text: #efe9dc;
   --text-soft: #b8b2a4;
-  --text-dim: #7d796f;
+  --text-dim: #8f8b80;   /* a11y — was #7d796f (4.18:1 fails AA), now 5.39:1 passes AA */
 
   /* Accent — refined brass */
   --gold: #b69256;
@@ -2955,6 +2955,21 @@ h1, h2, h3, h4,
   }
 }
 
+
+/* a11y — visually-hidden utility for screen-reader-only context.
+   Standard Bootstrap/Tailwind sr-only pattern: clip the element
+   out of visual flow but keep it in the accessibility tree. */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 </style>
 </head>
 <body>
@@ -2994,7 +3009,7 @@ h1, h2, h3, h4,
 </div>
 
 <!-- ========== NAVIGATION ========== -->
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" role="navigation" aria-label="Primary navigation"><!-- a11y -->
   <div class="nav-inner">
     <a href="#top" class="brand" aria-label="Car Centre — London">
       <span class="brand-emblem" aria-hidden="true">
@@ -3060,7 +3075,7 @@ h1, h2, h3, h4,
       <p class="lead">Fast, professional servicing and diagnostics — without the long wait. Drop your vehicle in the morning, drive it home in the afternoon, finished to the standard luxury owners trust.</p>
 
       <div class="hero-trust">
-        <span class="stars">★★★★★</span>
+        <span class="stars" aria-hidden="true">★★★★★</span><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
         <span class="sep"></span>
         <small>4.8 Google · 170+ Reviews</small>
       </div>
@@ -3117,7 +3132,7 @@ h1, h2, h3, h4,
 </div>
 
 <!-- ========== SAME-DAY MOT PROMISE ========== -->
-<section class="promise reveal light" id="promise">
+<section class="promise reveal light" id="promise" aria-labelledby="promise-heading">
   <div class="promise-grid">
     <div class="promise-image">
       <img src="workshop.jpg" alt="Car Centre BS workshop — luxury vehicle in for service" loading="eager" fetchpriority="high" decoding="async" />
@@ -3128,7 +3143,7 @@ h1, h2, h3, h4,
     </div>
     <div>
       <span class="eyebrow">Our Promise</span>
-      <h2 class="h-section" style="margin: 1rem 0 1.2rem;">Most MOTs and mechanical services <span class="italic-accent">completed the same day</span>.</h2>
+      <h2 id="promise-heading" class="h-section" style="margin: 1rem 0 1.2rem;">Most MOTs and mechanical services <span class="italic-accent">completed the same day</span>.</h2>
       <p class="lead">We complete MOTs and most mechanical work quickly and efficiently — so our customers don't waste time waiting on appointments. Booked in the morning, ready in the afternoon, finished to a standard luxury owners trust.</p>
 
       <div class="promise-points">
@@ -3159,11 +3174,11 @@ h1, h2, h3, h4,
 </section>
 
 <!-- ========== SERVICES ========== -->
-<section class="services reveal light" id="services">
+<section class="services reveal light" id="services" aria-labelledby="services-heading">
   <div class="section-head">
     <div class="title-block">
       <span class="eyebrow">The Workshop</span>
-      <h2 class="h-section" style="margin-top: 1rem;">A complete range of <span class="italic-accent">mechanical services</span>.</h2>
+      <h2 id="services-heading" class="h-section" style="margin-top: 1rem;">A complete range of <span class="italic-accent">mechanical services</span>.</h2>
     </div>
     <p class="lead">From a fast same-day MOT to deep engine diagnostics and full luxury vehicle servicing — our workshop is equipped to care for every system your car relies on. We cover all mechanical work (excluding bodywork repairs).</p>
   </div>
@@ -3307,11 +3322,11 @@ h1, h2, h3, h4,
 </section>
 
 <!-- ========== INSIDE OUR WORKSHOP ========== -->
-<section class="workshop reveal" id="workshop">
+<section class="workshop reveal" id="workshop" aria-labelledby="workshop-heading">
   <div class="section-head">
     <div class="title-block">
       <span class="eyebrow">Inside Our Workshop</span>
-      <h2 class="h-section" style="margin-top: 1rem;">A real working garage <span class="italic-accent">in NW11</span>.</h2>
+      <h2 id="workshop-heading" class="h-section" style="margin-top: 1rem;">A real working garage <span class="italic-accent">in NW11</span>.</h2>
     </div>
     <p class="lead">No stock photos — this is our actual workshop on Portsdown Mews. DVSA-approved MOT bays, prestige and everyday vehicles in for work, and a fully-equipped tyre and servicing operation.</p>
   </div>
@@ -3446,11 +3461,11 @@ h1, h2, h3, h4,
 </section>
 
 <!-- ========== WHY US ========== -->
-<section class="why reveal light" id="why">
+<section class="why reveal light" id="why" aria-labelledby="why-heading">
   <div class="section-head">
     <div class="title-block">
       <span class="eyebrow">Why Car Centre BS</span>
-      <h2 class="h-section" style="margin-top: 1rem;">Built on <span class="italic-accent">trust, craftsmanship</span> and a fast turnaround.</h2>
+      <h2 id="why-heading" class="h-section" style="margin-top: 1rem;">Built on <span class="italic-accent">trust, craftsmanship</span> and a fast turnaround.</h2>
     </div>
     <p class="lead">We earned our 4.8★ rating across 170+ Google reviews the only way it can be earned — by treating every car, and every owner, with the same care, transparency and attention to detail.</p>
   </div>
@@ -3488,12 +3503,12 @@ h1, h2, h3, h4,
 </section>
 
 <!-- ========== REVIEWS ========== -->
-<section class="reviews reveal light" id="reviews">
+<section class="reviews reveal light" id="reviews" aria-labelledby="reviews-heading">
   <div class="reviews-head">
     <span class="eyebrow">From Our Customers</span>
-    <h2 class="h-section">What London is <span class="italic-accent">saying about us</span>.</h2>
+    <h2 id="reviews-heading" class="h-section">What London is <span class="italic-accent">saying about us</span>.</h2>
     <div class="reviews-meta">
-      <span class="review-pill"><strong>4.8</strong> <span class="stars">★★★★★</span> Google</span>
+      <span class="review-pill"><strong>4.8</strong> <span class="stars" aria-hidden="true">★★★★★</span><span class="sr-only">5 out of 5 stars</span><!-- a11y --> Google</span>
       <span class="review-pill"><strong>170+</strong> Verified Reviews</span>
       <span class="review-pill">NW11 · London</span>
     </div>
@@ -3501,7 +3516,7 @@ h1, h2, h3, h4,
 
   <div class="review-grid" id="reviewGrid">
     <article class="review-card">
-      <div class="review-stars">★★★★★</div>
+      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
       <p class="review-text">"Absolutely exceptional service. They looked after my Rolls-Royce Ghost like it was their own. Honest pricing, immaculate workshop, and the same-day MOT was painless. I would not take my car anywhere else."</p>
       <div class="review-author">
         <div class="review-avatar">JM</div>
@@ -3512,7 +3527,7 @@ h1, h2, h3, h4,
       </div>
     </article>
     <article class="review-card">
-      <div class="review-stars">★★★★★</div>
+      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
       <p class="review-text">"Found this place by recommendation and so glad I did. They diagnosed an electrical fault on my Bentley Continental that two other garages had missed. Fair price and finished the same day. Truly first-class."</p>
       <div class="review-author">
         <div class="review-avatar">SK</div>
@@ -3523,7 +3538,7 @@ h1, h2, h3, h4,
       </div>
     </article>
     <article class="review-card">
-      <div class="review-stars">★★★★★</div>
+      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
       <p class="review-text">"I have been bringing my BMW M3 here for three years. Always honest, always thorough, always finished when promised. Family-run feel, dealership-level work, half the price. Cannot recommend highly enough."</p>
       <div class="review-author">
         <div class="review-avatar">DC</div>
@@ -3534,7 +3549,7 @@ h1, h2, h3, h4,
       </div>
     </article>
     <article class="review-card">
-      <div class="review-stars">★★★★★</div>
+      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
       <p class="review-text">"Booked same-day MOT for my Porsche 911 — in by 9am, out by lunchtime, full transparency on what they checked. Professional, courteous, and very clean facility. This is how a luxury garage should operate."</p>
       <div class="review-author">
         <div class="review-avatar">RP</div>
@@ -3545,7 +3560,7 @@ h1, h2, h3, h4,
       </div>
     </article>
     <article class="review-card">
-      <div class="review-stars">★★★★★</div>
+      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
       <p class="review-text">"Took my Ferrari 550 Barchetta in for an MOT and full inspection. They treated it with the respect a classic deserves. Detailed write-up, fair pricing, and they sourced a difficult-to-find part within 48 hours. Outstanding."</p>
       <div class="review-author">
         <div class="review-avatar">AT</div>
@@ -3556,7 +3571,7 @@ h1, h2, h3, h4,
       </div>
     </article>
     <article class="review-card">
-      <div class="review-stars">★★★★★</div>
+      <div class="review-stars" aria-hidden="true">★★★★★</div><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
       <p class="review-text">"Honest, transparent, and properly skilled. I drive an everyday Audi A4, not a prestige car, and they looked after me with the same care a Bentley owner would get. That tells you everything about how they run things."</p>
       <div class="review-author">
         <div class="review-avatar">LM</div>
@@ -3578,11 +3593,11 @@ h1, h2, h3, h4,
 </section>
 
 <!-- ========== VISITING THE GARAGE ========== -->
-<section class="why reveal light" id="visiting">
+<section class="why reveal light" id="visiting" aria-labelledby="visiting-heading">
   <div class="section-head">
     <div class="title-block">
       <span class="eyebrow">Visiting Us</span>
-      <h2 class="h-section" style="margin-top: 1rem;">Everything you need to know <span class="italic-accent">before you arrive</span>.</h2>
+      <h2 id="visiting-heading" class="h-section" style="margin-top: 1rem;">Everything you need to know <span class="italic-accent">before you arrive</span>.</h2>
     </div>
     <p class="lead">We're an established independent garage on Portsdown Mews in NW11 — straightforward to find and easy to deal with. Here's how a visit works.</p>
   </div>
@@ -3638,11 +3653,11 @@ h1, h2, h3, h4,
 </section>
 
 <!-- ========== BOOKING / CONTACT ========== -->
-<section class="booking reveal light" id="contact">
+<section class="booking reveal light" id="contact" aria-labelledby="contact-heading">
   <div class="section-head">
     <div class="title-block">
       <span class="eyebrow">Direct Contact</span>
-      <h2 class="h-section" style="margin-top: 1rem;">Skip the forms — <span class="italic-accent">talk to us</span>.</h2>
+      <h2 id="contact-heading" class="h-section" style="margin-top: 1rem;">Skip the forms — <span class="italic-accent">talk to us</span>.</h2>
     </div>
     <p class="lead">Most enquiries answered within minutes during workshop hours. WhatsApp, phone, or drop in — whichever is fastest for you.</p>
   </div>
@@ -3702,7 +3717,7 @@ h1, h2, h3, h4,
       <p class="lead-sub">Contact us directly for fast assistance and same-day availability — no forms, no waiting.</p>
 
       <div class="contact-rating">
-        <span class="stars">★★★★★</span>
+        <span class="stars" aria-hidden="true">★★★★★</span><span class="sr-only">5 out of 5 stars</span><!-- a11y -->
         <strong>4.8</strong> Google · 170+ reviews
       </div>
 
@@ -3801,233 +3816,315 @@ h1, h2, h3, h4,
 </footer>
 
 <!-- ========== FLOATING WHATSAPP ========== -->
-<a class="whatsapp-float" href="https://wa.me/447720296813" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/447720296813" target="_blank" rel="noopener" aria-label="WhatsApp Car Centre BS LTD"><!-- a11y -->
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
 </a>
 
 <!-- ========== MOBILE STICKY CTA ========== -->
 <div class="mobile-bar">
-  <a class="call" href="tel:+447720296813">
+  <a class="call" href="tel:+447720296813" aria-label="Call Car Centre BS LTD on 0 7 7 2 0 2 9 6 8 1 3"><!-- a11y -->
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
     Call
   </a>
-  <a class="whatsapp" href="https://wa.me/447720296813" target="_blank" rel="noopener">
+  <a class="whatsapp" href="https://wa.me/447720296813" target="_blank" rel="noopener" aria-label="WhatsApp Car Centre BS LTD"><!-- a11y -->
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
     WhatsApp
   </a>
-  <a class="directions" href="https://www.google.com/maps/search/?api=1&amp;query=Car+Centre+BS+LTD+17-25+Portsdown+Mews+London+NW11+7ES" target="_blank" rel="noopener">
+  <a class="directions" href="https://www.google.com/maps/search/?api=1&amp;query=Car+Centre+BS+LTD+17-25+Portsdown+Mews+London+NW11+7ES" target="_blank" rel="noopener" aria-label="Directions to Car Centre BS LTD"><!-- a11y -->
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
     Directions
   </a>
 </div>
 
 <script>
-const nav = document.getElementById('nav');
-const onScroll = () => {
-  if (window.scrollY > 24) nav.classList.add('scrolled');
-  else nav.classList.remove('scrolled');
-};
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+(function () {
+  'use strict';
 
-// ==== Mobile menu — robust binding for iOS Safari ====
-try {
-  const menuToggle = document.getElementById('menuToggle');
-  const menuClose = document.getElementById('menuClose');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  const openMenu = (e) => {
-    if (e && e.cancelable) e.preventDefault();
-    console.log('[menu] open');
-    if (mobileMenu) mobileMenu.classList.add('open');
-    document.body.classList.add('menu-open');
-    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
-  };
-  const closeMenu = (e) => {
-    if (e && e.cancelable) e.preventDefault();
-    console.log('[menu] close');
-    if (mobileMenu) mobileMenu.classList.remove('open');
-    document.body.classList.remove('menu-open');
-    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
-  };
-
-  if (menuToggle) {
-    menuToggle.addEventListener('click', openMenu);
-    menuToggle.addEventListener('touchend', openMenu, { passive: false });
+  // ---------- DOMContentLoaded gate ----------
+  // Even though this script is at the end of <body>, the gate is
+  // defensive against future changes that might move it.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
   }
-  if (menuClose) {
-    menuClose.addEventListener('click', closeMenu);
-    menuClose.addEventListener('touchend', closeMenu, { passive: false });
+
+  function init() {
+    initNavScrollState();
+    initMobileMenu();
+    initRevealObserver();
+    initStatCounters();
+    initReviewsToggle();
+    initFooterYear();
+    initCtaTracking();
   }
-  if (mobileMenu) {
-    /* Mobile-menu link taps — DO NOT preventDefault here.
-       The previous binding used closeMenu, which calls
-       preventDefault() and so swallowed the href navigation
-       entirely. Each tap closed the menu but never scrolled.
-       Now we close the menu, unlock body scroll, and either:
-         (a) let the native anchor fire (no preventDefault), or
-         (b) for in-page anchors, take over with a smooth
-             scrollTo that compensates for the sticky 92px nav. */
+
+  // ===========================================================
+  // 1. NAV SCROLL STATE
+  // Single IntersectionObserver on a 1x24px sentinel at the
+  // top of the page. When the sentinel leaves the viewport, the
+  // nav gets `.scrolled`. Replaces the previous scroll listener
+  // entirely — zero scroll-event cost, GPU-friendly, no throttling
+  // needed because it isn't a scroll event.
+  // ===========================================================
+  function initNavScrollState() {
+    const nav = document.getElementById('nav');
+    if (!nav) return;
+
+    if (!('IntersectionObserver' in window)) {
+      // Legacy fallback — throttled scroll listener
+      let ticking = false;
+      const update = () => {
+        nav.classList.toggle('scrolled', window.scrollY > 24);
+        ticking = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+      update();
+      return;
+    }
+
+    const sentinel = document.createElement('div');
+    sentinel.setAttribute('aria-hidden', 'true');
+    sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:24px;pointer-events:none;';
+    document.body.insertBefore(sentinel, document.body.firstChild);
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        nav.classList.toggle('scrolled', !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    io.observe(sentinel);
+  }
+
+  // ===========================================================
+  // 2. MOBILE MENU
+  // Single source of truth for open/closed state. Every toggle
+  // path (button click, touchend, document delegation, esc key,
+  // link tap, backdrop tap) writes through setOpen(), so the
+  // menu can never desync between visual state and body scroll
+  // lock state.
+  // ===========================================================
+  function initMobileMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (!mobileMenu) return;
+
+    let isOpen = false;
+
+    // a11y — focus management. Opening moves focus to first link
+    // inside the menu so keyboard users can navigate immediately.
+    // Closing returns focus to the hamburger toggle so the tab
+    // order is never lost. setOpen is the single source of truth.
+    const setOpen = (open) => {
+      isOpen = !!open;
+      mobileMenu.classList.toggle('open', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        const firstLink = mobileMenu.querySelector('a, button');
+        if (firstLink) requestAnimationFrame(() => firstLink.focus());
+      } else if (menuToggle) {
+        requestAnimationFrame(() => menuToggle.focus());
+      }
+    };
+    const openMenu = (e) => { if (e && e.cancelable) e.preventDefault(); setOpen(true); };
+    const closeMenu = (e) => { if (e && e.cancelable) e.preventDefault(); setOpen(false); };
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', openMenu);
+      menuToggle.addEventListener('touchend', openMenu, { passive: false });
+    }
+    if (menuClose) {
+      menuClose.addEventListener('click', closeMenu);
+      menuClose.addEventListener('touchend', closeMenu, { passive: false });
+    }
+
+    // Link taps inside the menu — close + smooth-scroll with sticky-nav offset.
     mobileMenu.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', (e) => {
         try {
           const href = a.getAttribute('href') || '';
           const isInPageAnchor = href.length > 1 && href.charAt(0) === '#';
-
-          /* Close immediately — visual + body-scroll lock release */
-          mobileMenu.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
-
+          setOpen(false);
           if (isInPageAnchor) {
             const target = document.querySelector(href);
             if (target) {
               e.preventDefault();
-              /* One rAF tick so body scroll is unlocked
-                 BEFORE we measure + scroll. */
               requestAnimationFrame(() => {
-                const headerOffset = 84;
-                const targetTop = target.getBoundingClientRect().top
-                                  + window.pageYOffset
-                                  - headerOffset;
-                try {
-                  window.scrollTo({ top: targetTop, behavior: 'smooth' });
-                } catch (_) {
-                  /* Pre-15.4 Safari fallback — plain jump */
-                  window.scrollTo(0, targetTop);
-                }
+                const top = target.getBoundingClientRect().top + window.pageYOffset - 84;
+                try { window.scrollTo({ top: top, behavior: 'smooth' }); }
+                catch (_) { window.scrollTo(0, top); }
               });
             }
           }
-        } catch (err) { console.error('[menu] link tap failed', err); }
+        } catch (_) { /* swallow — fall through to native nav */ }
       });
     });
+
+    // Safari belt-and-braces — document-level delegation in case
+    // direct binding ever fails. Reads isOpen so it never double-fires.
+    document.addEventListener('click', (e) => {
+      const t = e.target.closest && e.target.closest('#menuToggle');
+      const c = e.target.closest && e.target.closest('#menuClose');
+      if (t && !isOpen) openMenu(e);
+      else if (c && isOpen) closeMenu(e);
+    }, { capture: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) closeMenu(e);
+    });
   }
 
-  // Document-level delegation — Safari fallback
-  document.addEventListener('click', (e) => {
-    const t = e.target.closest && e.target.closest('#menuToggle');
-    const c = e.target.closest && e.target.closest('#menuClose');
-    if (t) { console.log('[menu] delegated open'); openMenu(e); }
-    else if (c) { console.log('[menu] delegated close'); closeMenu(e); }
-  }, { capture: true });
+  // ===========================================================
+  // 3. REVEAL OBSERVER
+  // Adds `.in` to every `.reveal` section when it enters view.
+  // 3-second JS safety timeout disconnects the observer and
+  // forces .in on any laggards — belt to the existing CSS
+  // `revealSafetyNet` animation belt.
+  // ===========================================================
+  function initRevealObserver() {
+    const targets = document.querySelectorAll('.reveal');
+    if (!targets.length) return;
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) closeMenu(e);
-  });
-} catch (err) { console.error('[menu] init failed', err); }
+    const ensureIn = (el) => el.classList.add('in');
 
-// Reviews "View all" progressive disclosure
-const toggle = document.getElementById('reviewsToggle');
-const reviewGrid = document.getElementById('reviewGrid');
-if (toggle && reviewGrid) {
-  toggle.addEventListener('click', () => {
-    const expanded = reviewGrid.classList.toggle('expanded');
-    toggle.setAttribute('aria-expanded', String(expanded));
-    toggle.textContent = expanded ? 'Show fewer reviews' : 'View all reviews';
-  });
-}
-
-// Booking form was replaced with a direct-contact card; guard for re-introduction
-const form = document.querySelector('form.booking-form');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const status = form.querySelector('.form-status');
-    if (status) {
-      status.className = 'form-status is-success';
-      status.textContent = 'Thank you — we will be in touch shortly.';
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(ensureIn);
+      return;
     }
-  });
-}
 
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          ensureIn(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -10% 0px' });
 
-/* ==========================================================
-   REVEAL OBSERVER — adds .in to .reveal sections early
-   threshold 0.08 + negative rootMargin = animation begins
-   BEFORE the section is fully in view, so the user never
-   sees the opacity:0 starting state. Falls through cleanly
-   on browsers without IntersectionObserver — every section
-   gets .in immediately, identical to the safety-net animation.
-   ========================================================== */
-(function initRevealObserver() {
-  const targets = document.querySelectorAll('.reveal');
-  if (!targets.length) return;
+    targets.forEach((el) => io.observe(el));
 
-  if (!('IntersectionObserver' in window)) {
-    targets.forEach((el) => el.classList.add('in'));
-    return;
+    // JS safety net — 3s after init, any laggard gets .in and the observer disconnects.
+    setTimeout(() => { targets.forEach(ensureIn); io.disconnect(); }, 3000);
   }
 
-  const reveal = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        reveal.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -10% 0px' });
-  targets.forEach((el) => reveal.observe(el));
-})();
+  // ===========================================================
+  // 4. STAT COUNTERS
+  // Three independent kick-starts (observer, sync visibility
+  // check, setTimeout net). All observers disconnect after firing.
+  // ===========================================================
+  function initStatCounters() {
+    const counters = document.querySelectorAll('.counter[data-target]');
+    if (!counters.length) return;
 
+    const reduced = window.matchMedia &&
+                    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fmt = (n) => n.toLocaleString('en-GB');
+    let started = false;
 
-/* ==========================================================
-   STAT COUNTERS — Safari-hardened.
-   Three independent kick-starts: IntersectionObserver,
-   synchronous getBoundingClientRect check at script-init for
-   already-visible cases, and a 4-second setTimeout safety net.
-   Whichever fires first wins; the started flag makes the
-   others no-ops. Respects prefers-reduced-motion.
-   ========================================================== */
-(function initStatCounters() {
-  const counters = document.querySelectorAll('.counter[data-target]');
-  if (!counters.length) return;
-  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const fmt = (n) => n.toLocaleString('en-GB');
-  let started = false;
-  const animate = (el) => {
-    if (el.dataset.done === '1') return;
-    el.dataset.done = '1';
-    const target = parseInt(el.dataset.target, 10);
-    if (!Number.isFinite(target)) return;
-    const suffix = el.dataset.suffix || '';
-    if (reduced) { el.textContent = fmt(target) + suffix; return; }
-    const duration = 1800;
-    const start = performance.now();
-    const ease = (t) => 1 - Math.pow(1 - t, 3);
-    const tick = (now) => {
-      const p = Math.min((now - start) / duration, 1);
-      const v = Math.round(target * ease(p));
-      el.textContent = fmt(v) + (p === 1 ? suffix : '');
-      if (p < 1) requestAnimationFrame(tick);
+    const animate = (el) => {
+      if (el.dataset.done === '1') return;
+      el.dataset.done = '1';
+      const target = parseInt(el.dataset.target, 10);
+      if (!Number.isFinite(target)) return;
+      const suffix = el.dataset.suffix || '';
+      if (reduced) { el.textContent = fmt(target) + suffix; return; }
+      const duration = 1800;
+      const start = performance.now();
+      const ease = (t) => 1 - Math.pow(1 - t, 3);
+      const tick = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        const v = Math.round(target * ease(p));
+        el.textContent = fmt(v) + (p === 1 ? suffix : '');
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
     };
-    requestAnimationFrame(tick);
-  };
-  const startAll = () => {
-    if (started) return;
-    started = true;
-    counters.forEach(animate);
-  };
-  const statsSection = document.querySelector('.stats') || counters[0].closest('section');
-  const observeTarget = statsSection || counters[0];
-  if (!('IntersectionObserver' in window)) { startAll(); return; }
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) { startAll(); observer.disconnect(); }
-    });
-  }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
-  observer.observe(observeTarget);
-  if (statsSection) {
-    requestAnimationFrame(() => {
-      const r = statsSection.getBoundingClientRect();
-      if (r.top < window.innerHeight && r.bottom > 0) startAll();
+
+    const startAll = () => { if (started) return; started = true; counters.forEach(animate); };
+
+    const statsSection = document.querySelector('.stats') || counters[0].closest('section');
+    const observeTarget = statsSection || counters[0];
+
+    if (!('IntersectionObserver' in window)) { startAll(); return; }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { startAll(); observer.disconnect(); }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
+    observer.observe(observeTarget);
+
+    if (statsSection) {
+      requestAnimationFrame(() => {
+        const r = statsSection.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) startAll();
+      });
+    }
+
+    setTimeout(startAll, 4000);
+  }
+
+  // ===========================================================
+  // 5. REVIEWS TOGGLE
+  // ===========================================================
+  function initReviewsToggle() {
+    const toggle = document.getElementById('reviewsToggle');
+    const grid = document.getElementById('reviewGrid');
+    if (!toggle || !grid) return;
+    toggle.addEventListener('click', () => {
+      const expanded = grid.classList.toggle('expanded');
+      toggle.setAttribute('aria-expanded', String(expanded));
+      toggle.textContent = expanded ? 'Show fewer reviews' : 'View all reviews';
     });
   }
-  setTimeout(startAll, 4000);
+
+  // ===========================================================
+  // 6. FOOTER YEAR
+  // ===========================================================
+  function initFooterYear() {
+    const el = document.getElementById('year');
+    if (el) el.textContent = String(new Date().getFullYear());
+  }
+
+  // ===========================================================
+  // 7. CTA ANALYTICS HOOK
+  // Lightweight tracking shim — fires `cta_call`, `cta_whatsapp`,
+  // `cta_directions` events. Wires into window.gtag if present
+  // (Google Analytics 4) or window.dataLayer otherwise (GTM).
+  // No-op if neither exists — safe to ship without analytics
+  // and wire up later by just dropping the gtag/GTM snippet
+  // anywhere in the head.
+  // ===========================================================
+  function initCtaTracking() {
+    const track = (name, props) => {
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', name, props || {});
+        } else if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push(Object.assign({ event: name }, props || {}));
+        }
+      } catch (_) { /* analytics never blocks UX */ }
+    };
+
+    document.querySelectorAll('a[href^="tel:"]').forEach((a) => {
+      a.addEventListener('click', () => {
+        track('cta_call', { phone: a.getAttribute('href').replace('tel:', '') });
+      });
+    });
+    document.querySelectorAll('a[href*="wa.me"]').forEach((a) => {
+      a.addEventListener('click', () => track('cta_whatsapp'));
+    });
+    document.querySelectorAll('a[href*="maps.app"], a[href*="goo.gl/maps"], a[href*="maps.google"]').forEach((a) => {
+      a.addEventListener('click', () => track('cta_directions'));
+    });
+  }
 })();
 </script>
 
 </body>
 </html>
+ 
