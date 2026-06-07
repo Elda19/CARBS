@@ -9,7 +9,7 @@
 <meta name="author" content="Car Centre BS LTD" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="theme-color" content="#0f1113" />
-<link rel="canonical" href="https://www.carcentrebs.co.uk/" />
+<link rel="canonical" href="https://www.carcentrebs.uk/" />
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="Car Centre BS LTD" />
@@ -17,15 +17,15 @@
 <meta property="og:description" content="London's premium independent garage in NW11 for same-day MOT, expert diagnostics and luxury vehicle servicing. Trusted by 170+ London drivers." />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_GB" />
-<meta property="og:url" content="https://www.carcentrebs.co.uk/" />
-<meta property="og:image" content="https://www.carcentrebs.co.uk/hero.jpg" />
+<meta property="og:url" content="https://www.carcentrebs.uk/" />
+<meta property="og:image" content="https://www.carcentrebs.uk/hero.jpg" />
 <meta property="og:image:alt" content="Rolls-Royce in front of Tower Bridge, London at night" />
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Car Centre BS LTD — Same-Day MOT &amp; Premium Vehicle Care in London" />
 <meta name="twitter:description" content="London's premium independent garage in NW11. Same-day MOT, diagnostics, servicing and luxury vehicle care." />
-<meta name="twitter:image" content="https://www.carcentrebs.co.uk/hero.jpg" />
+<meta name="twitter:image" content="https://www.carcentrebs.uk/hero.jpg" />
 
 <!-- JSON-LD: Local Business structured data -->
 <script type="application/ld+json">
@@ -33,8 +33,8 @@
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   "name": "Car Centre BS LTD",
-  "image": "https://www.carcentrebs.co.uk/hero.jpg",
-  "url": "https://www.carcentrebs.co.uk/",
+  "image": "https://www.carcentrebs.uk/hero.jpg",
+  "url": "https://www.carcentrebs.uk/",
   "telephone": "+447720296813",
   "email": "carcentre@outlook.com",
   "description": "London's premium independent garage in NW11 for same-day MOT, expert diagnostics, brakes, servicing and luxury vehicle care.",
@@ -193,7 +193,11 @@ section { padding: var(--section) var(--pad); position: relative; }
    (.promise, .services, .trust strip, .stats) must paint
    synchronously or the hero → promise transition shows a "blank
    then pop-in" frame on slower devices. */
-.workshop, .marques, .reviews, .booking, .cinematic {
+/* content-visibility removed from workshop / reviews / booking /
+   cinematic — those were causing blank-frame gaps on iPhone Safari
+   when the user scrolled fast. Only the deep-page marques logo
+   wall keeps the lazy-render optimisation. */
+.marques {
   content-visibility: auto;
   contain-intrinsic-size: auto 720px;
 }
@@ -885,7 +889,7 @@ section.light + section.light { border-top: none; }
 .hero-ctas,
 .hero-signals {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(8px);
   animation: heroIn 1s var(--ease) forwards;
 }
 .hero h1 { animation-delay: 0.15s; }
@@ -1769,7 +1773,7 @@ section.light + section.light { border-top: none; }
   min-height: 100%;
   isolation: isolate;
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(8px);
   animation: heroIn 1s var(--ease) 0.2s forwards;
 }
 .contact-card::before {
@@ -3290,7 +3294,7 @@ h1, h2, h3, h4,
       <div class="stat-label">Cars Serviced</div>
     </div>
     <div class="stat">
-      <div class="stat-num"><span>4.9</span><span class="unit">★</span></div>
+      <div class="stat-num"><span>4.8</span><span class="unit">★</span></div>
       <div class="stat-rule"></div>
       <div class="stat-label">Average Customer Rating</div>
     </div>
@@ -4011,6 +4015,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   if (!('IntersectionObserver' in window)) { startAll(); return; }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+      if (entry.isIntersecting) { startAll(); observer.disconnect(); }
     });
   }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
   observer.observe(observeTarget);
@@ -4026,4 +4031,3 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 </body>
 </html>
-tml>
