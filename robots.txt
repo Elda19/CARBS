@@ -1,4 +1,10 @@
+# robots.txt for Car Centre BS LTD
+# https://www.carcentre.uk/
+
 User-agent: *
 Allow: /
+Disallow: /uploads/
+Disallow: /private/
 
+# Sitemap
 Sitemap: https://www.carcentre.uk/sitemap.xml
